@@ -1,0 +1,144 @@
+@import url(./portfolio.media.css);
+
+/* font-family */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Secular+One&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #0D1117;
+}
+
+* {
+    user-select: none;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Secular One', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    height: 80px;
+
+    background-color: #161B22;
+    border-bottom: 1px solid orange;
+}
+
+.page-navbar {
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-username {
+    font-size: 1.5em;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu a {
+    margin: 0 20px;
+    font-size: 1.25em;
+    box-sizing: border-box;
+    transition: ease-in .2s;
+}
+
+#menu a:hover {
+    color: white;
+    border-top: 1px solid white;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5%;
+    position: relative;
+    min-height: 60vh;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+.left-side_content {
+    padding: 10px;
+    line-height: 50px;
+}
+.left-side_content p {
+    color: white;
+    font-size: 1.5em;
+}
+#maxim-dudai, #front-end {
+    color: orange;
+    background-color: white;
+    padding: 10px 20px;
+    margin-left: 5px;
+    border: 0;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+    cursor: grab;
+}
+#maxim-dudai:hover, #front-end:hover {
+    background-color: orange;
+    color: white;
+}
+#hello-world { cursor: grab; }
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid orange;
+}
+
+.linkedin, .github {
+    margin-top: 5px;
+}
+
+.linkedin:hover, .github:hover {
+    transform: scale(1.1);
+}
+
+#linkedin-link, #github-link {
+    padding: 10px 20px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    transition: ease-in-out .3s;
+}
+#linkedin-icon, #github-icon {
+    color: white;
+    margin-right: 5px;
+}
+
+#linkedin-link:hover, #github-link:hover {
+    background-color: orange;
+    color: white;
+}
