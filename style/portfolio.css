@@ -1,4 +1,4 @@
-@import url(./portfolio.media.css);
+@import 'portfolio.media.css';
 
 /* font-family */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Secular+One&display=swap');
@@ -55,7 +55,7 @@ a {
 
 #menu {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 #menu a {
@@ -141,4 +141,135 @@ a {
 #linkedin-link:hover, #github-link:hover {
     background-color: orange;
     color: white;
+}
+
+[data-menu="button"] {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    nav {
+        padding: 0 5% !important;
+    }
+
+    [data-menu="button"] {
+        display: block;
+        background-color: #151515;
+        border: none;
+        border-top: 3px orange solid;
+        padding: .8rem 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+    }
+
+    [data-menu="button"]::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: orange;
+        transition: .3s transform;
+    }
+
+    [data-menu="button"]::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: orange;
+        transition: .3s transform;
+    }
+
+    [data-menu="list"] {
+        visibility: hidden;
+        position: absolute;
+        top: 10%;
+        right: 1.5%;
+        box-shadow: 0 4px 4px rgba(0,0,0,.3);
+        background-color: #151515;
+        padding: 10px;
+        z-index: 50;
+        margin: 0;
+        font-family: "Inter", sans-serif;
+    }
+
+    [data-menu="list"].active {
+        display: block;
+        visibility: visible;
+        animation: show-down .3s forwards;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .page-content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        justify-content: center;
+    }
+
+    #home-page-img {
+        display: none;
+    }
+    p, span {
+        font-size: 12px;
+    }
+    .page-content, .content {
+        width: 100%;
+    }
+    .left-side_content {
+        padding: 0;
+    }
+    .about p, .about span {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .social-links a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1285px) {
+    #home-page-img {
+        width: 400px;
+        height: 250px;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .about p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1550px) {
+    .about p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 }
