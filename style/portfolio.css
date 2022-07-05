@@ -78,7 +78,7 @@ a {
     width: 100%;
     margin-top: 5%;
     position: relative;
-    min-height: 60vh;
+    min-height: 75vh;
 }
 .content {
     display: flex;
@@ -141,6 +141,61 @@ a {
 #linkedin-link:hover, #github-link:hover {
     background-color: orange;
     color: white;
+}
+/* about me */
+
+.about-me {
+    background-color: #161B22;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 500px;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.about-me_image {
+    background-color: #0D1117;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#send-me-email {
+    width: 100%;
+    background-color: #161B22;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#about-me-photo {
+    height: 250px;
+    width: 450px;
+    border: 0;
+    border-radius: 5px;
+}
+#mail-icon {
+    margin-right: 5px;
+}
+.about-me_info {
+    margin-left: 5%;
+    line-height: 30px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+#about-me {
+    font-size: 1.25em;
 }
 @media (max-width: 800px) {
     .page-content {
@@ -206,5 +261,27 @@ a {
         display: flex;
         flex-direction: column;
         text-align: center;
+    }
+    .about-me-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-me-photo {
+        width: 250px;
+        height: 128px;
+    }
+    .about-me_info {
+        width: 100%;
+    }
+    #about-me {
+        font-size: .8em;
+    }
+    .about-me_image {
+        width: 100%;
+    }   
+    .about-me_info {
+        letter-spacing: 1.5px;
+        line-height: 15px;
     }
 }
