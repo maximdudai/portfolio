@@ -3,6 +3,8 @@
 /* font-family */
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Secular+One&display=swap');
 
+/* about me description */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Oswald&family=Roboto:ital,wght@1,100&family=Secular+One&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -48,9 +50,6 @@ a {
     text-decoration: none;
 }
 
-p {
-    cursor: pointer;
-}
 
 .nav-bar {
     display: flex;
@@ -182,6 +181,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     width: 70%;
 }
 
@@ -224,9 +224,9 @@ p {
     letter-spacing: 1.5px;
 }
 #about-me {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.25em;
-    font-weight: 400;
+    font-weight: 500;
 }
 @media (max-width: 800px) {
     .page-content {
