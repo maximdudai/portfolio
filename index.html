@@ -17,14 +17,14 @@
 </head>
 <body>
     
-    <section class="home-page">
+    <section class="home-page" id="home-page-section">
         <div class="nav-bar">
             <nav class="page-navbar">
                 <div class="nav-title"> <a class="title-username" href="#">‹MD/›</a></div>
                 <button data-menu="button" aria-controls="menu"></button>
                 <ul data-menu="list" id="menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#home-page-section">Home</a></li>
+                    <li><a href="#about-me-section">About</a></li>
                     <li><a href="#">Experience</a></li>
                     <li><a href="#">Projects</a></li>
                 </ul>
@@ -61,7 +61,7 @@
         </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="about-me-section">
         <div class="about-me-content">
             <div class="about-me_image">
                 <img id="about-me-photo" src="https://scontent.flis9-1.fna.fbcdn.net/v/t39.30808-6/283602869_3246676072326798_4236493034790926017_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=kfjC_SjH-DUAX_zAGf_&_nc_ht=scontent.flis9-1.fna&oh=00_AT-ZbsiUL9vK381IY2laG23FZrYDsKF2Rh9U2rfsn0Qlcw&oe=62C9539A" alt="about-me-img">
@@ -79,8 +79,7 @@
             </div>
         </div>
     </section>
-
-    <footer style="color: white; font-size: 12px; position: relative; bottom: 0;">Under development...</footer>
+    <div class="up-arrow"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
     <script src="./script/portfolio.js"></script>
 </body>
 </html>
