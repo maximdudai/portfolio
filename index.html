@@ -21,10 +21,9 @@
                 <div class="nav-title"> <a class="title-username" href="#">‹MD/›</a></div>
                 <button data-menu="button" aria-controls="menu"></button>
                 <ul data-menu="list" id="menu">
-                    <li><a href="#home-page-section">Home</a></li>
+                    <li><a href="#home-page-section" onclick="checkDefault(event);">Home</a></li>
                     <li><a href="#about-me-section">About</a></li>
-                    <li><a href="#">Experience</a></li>
-                    <li><a href="#">Projects</a></li>
+                    <li><a href="#all-projects">Projects</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,10 +78,56 @@
     </section>
 
     <section class="projects" id="all-projects">
-        
+        <div class="project-title">
+            <h3 id="my-project-title">Projects</h3>
+        </div>
+        <div class="my-projects">
+            <div class="project-item project-1">
+                <img id="hotel-mandachi" src="./img/projects/hotel-mandachi.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" href="https://maximdudai.github.io/mandachi/" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" href="https://github.com/maximdudai/mandachi" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+            <div class="project-item project-1">
+                <img id="soon-img" src="./img/projects/coming-soon.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" available="false" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" available="false" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+            <div class="project-item project-1">
+                <img id="soon-img" src="./img/projects/coming-soon.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+            <div class="project-item project-1">
+                <img id="soon-img" src="./img/projects/coming-soon.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+            <div class="project-item project-1">
+                <img id="soon-img" src="./img/projects/coming-soon.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+            <div class="project-item project-1">
+                <img id="soon-img" src="./img/projects/coming-soon.png" alt="hotel-mandachi">
+                <div class="code-link">
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Live Preview</a>                
+                    <a id="link-btn" href="/" target="_blank" rel="noopener noreferrer">Source Code</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div class="up-arrow"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+    <div class="up-arrow"><i class="fa fa-arrow-up" aria-hidden="true" onclick="resetUrl();"></i></div>
     <script src="./script/portfolio.js"></script>
 </body>
 </html>

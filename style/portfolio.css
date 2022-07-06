@@ -173,7 +173,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    border-bottom: 1px solid orange;
     height: 500px;
 }
 
@@ -228,6 +228,148 @@ a {
     font-size: 1.25em;
     font-weight: 500;
 }
+
+/* projects */
+
+.projects {
+    margin-top: 7%;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+}
+.my-projects {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    grid-template-rows: auto;
+    row-gap: 2rem;
+    justify-content: center;
+}
+
+#my-project-title {
+    color: white;
+    font-size: 1.5em;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.project-item {
+    background-color: #161B22;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px;
+    transition: ease-in-out .3s;
+}
+.project-item:hover {
+    transform: scale(1.1);
+}
+
+.code-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5px;
+}
+.code-link a {
+    border: 1px solid orange;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.code-link a:hover {
+    color: white;
+}
+
+#hotel-mandachi {
+    width: 100%;
+    height: 70%;
+}
+#soon-img {
+    width: 50%;
+}
+a[available="false"] {
+    pointer-events: none;
+}
+
+/* projects */
+
+
+/* global */
+@media (max-width: 1550px) {
+    .about p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-me-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #about-me-photo {
+        width: 250px;
+        height: 128px;
+    }
+    #send-me-email {
+        margin-top: 10px;
+    }
+    .about-me_info {
+        width: 100%;
+    }
+    #about-me {
+        font-size: .8em;
+    }
+    .about-me_image {
+        width: 100%;
+    }   
+    .about-me_info {
+        letter-spacing: 1.5px;
+        line-height: 15px;
+    }
+    .my-projects { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 1285px) {
+    .my-projects { 
+        width: 100%;
+        grid-template-columns: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home-page-img {
+        width: 400px;
+        height: 250px;
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .about p {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 800px) {
     .page-content {
         display: flex;
@@ -261,61 +403,5 @@ a {
     }
     .social-links a {
         font-size: 12px;
-    }
-}
-
-@media (max-width: 1285px) {
-    #home-page-img {
-        width: 400px;
-        height: 250px;
-    }
-    .about {
-        display: flex;
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .about p {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .social-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 1550px) {
-    .about p {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-me-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #about-me-photo {
-        width: 250px;
-        height: 128px;
-    }
-    #send-me-email {
-        margin-top: 10px;
-    }
-    .about-me_info {
-        width: 100%;
-    }
-    #about-me {
-        font-size: .8em;
-    }
-    .about-me_image {
-        width: 100%;
-    }   
-    .about-me_info {
-        letter-spacing: 1.5px;
-        line-height: 15px;
     }
 }
