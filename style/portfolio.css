@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Secular+One&display=swap');
 
 /* about me description */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Oswald&family=Roboto:ital,wght@1,100&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -226,7 +226,6 @@ a {
 #about-me {
     font-family: 'Inter', sans-serif;
     font-size: 1.25em;
-    font-weight: 500;
 }
 
 /* projects */
