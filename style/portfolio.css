@@ -233,7 +233,7 @@ a {
 .projects {
     margin-top: 7%;
     width: 100%;
-    height: 700px;
+    height: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -259,7 +259,7 @@ a {
 .project-item {
     background-color: #161B22;
     width: 400px;
-    height: 300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -300,6 +300,15 @@ a[available="false"] {
     pointer-events: none;
 }
 
+.used-tech {
+    color: white;
+    font-size: 2em;
+    margin-top: 5%;
+}
+
+.used-tech i {
+    margin: 0 10px;
+}
 /* projects */
 
 
