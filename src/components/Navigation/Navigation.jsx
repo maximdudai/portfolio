@@ -38,7 +38,7 @@ const Navigation = () => {
                             <div className="mobileMenuToggleButton">
                                 <button 
                                     onClick={handleButtonMobileMenu}
-                                    className='text-2xl'
+                                    className='text-2xl text-gray-200'
                                 >
 
                                     <RiMenuFoldLine />

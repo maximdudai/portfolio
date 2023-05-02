@@ -12,19 +12,19 @@ import { BiDotsHorizontalRounded } from 'react-icons/bi'
 const MobileMenu = ({ toggleMobileMenu }) => {
     return (
         <>
-            <div className="mobileMenu absolute inset-0 w-screen h-screen bg-gray-400 dark:bg-slate-800">
+            <div className="mobileMenu absolute inset-0 w-screen h-screen bg-gray-200 dark:bg-slate-800">
                 <div className="mobileMenuNavbarContent w-full flex justify-between items-center p-2 px-3">
                     
                     <div className="mobileMenuCloseModal">
                         <button
-                            className='text-2xl'
+                            className='text-2xl text-gray-900 dark:text-gray-200'
                             onClick={toggleMobileMenu}
                         >
                             <RiMenuUnfoldLine />
                         </button>
                     </div>
 
-                    <div className="mobileMenuLogo">
+                    <div className="mobileMenuLogo rounded-full bg-slate-600 dark:bg-transparent">
                         <img 
                             className='w-20'
                             src={MaxDev}
@@ -38,8 +38,8 @@ const MobileMenu = ({ toggleMobileMenu }) => {
         
                     <div className="mobileMenuSocialContainer w-full flex flex-col items-center">
                         
-                        <div className="mobileMenuSocialTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400">
-                            <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest'>social links</h2>
+                        <div className="mobileMenuSocialTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
+                            <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest text-gray-200'>social links</h2>
                         </div>
 
                         <div className="mobileMenuSocialContent w-full flex justify-evenly mt-5">
@@ -79,8 +79,8 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                     </div>
 
                     <div className="mobileMenuContainer w-full flex flex-col items-center">
-                        <div className="mobileMenuPageTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400">
-                            <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest'>Explore</h2>
+                        <div className="mobileMenuPageTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
+                            <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest text-gray-200'>Explore</h2>
                         </div>
 
                         <div className="mobileMenuPageAboutMe w-full flex justify-center">
@@ -120,7 +120,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
 
                     <div className="mobileMenuContactMe w-full flex justify-center">
                         <button
-                            className='font-semibold tracking-widest border-[1px] w-3/5 p-2 rounded-lg'    
+                            className='font-semibold tracking-widest border-[1px] w-3/5 p-2 rounded-lg bg-slate-600 dark:bg-transparent text-gray-200'    
                         >
                             Contact Me!
                         </button>
