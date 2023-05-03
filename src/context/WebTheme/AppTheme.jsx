@@ -7,13 +7,13 @@ export const WebTheme = ({ children }) => {
     const [defaultTheme, setDefaultTheme] = useState(localStorage.getItem("theme") ?? "dark");
 
     const handleAppTheme = () => {
-        setDefaultTheme(defaultTheme === 'dark' ? 'ligth' : 'dark');
+        setDefaultTheme(defaultTheme === 'dark' ? 'light' : 'dark');
     };
 
     useEffect(() => {
         const root = window.document.documentElement;
 
-        const toggleOldTheme = defaultTheme === 'dark' ? 'ligth' : 'dark';
+        const toggleOldTheme = defaultTheme === 'dark' ? 'light' : 'dark';
 
         root.classList.remove(toggleOldTheme);
         root.classList.add(defaultTheme);
