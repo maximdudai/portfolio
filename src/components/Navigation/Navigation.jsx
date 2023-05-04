@@ -1,24 +1,36 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { RiMenuFoldLine } from 'react-icons/ri';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 import MaxDev from '../../assets/maxdev-logo.png';
 
 import './Style/NavigationStyle.scss';
 
-import { SlSocialLinkedin } from 'react-icons/sl';
-import { RxTwitterLogo } from 'react-icons/rx';
-import { VscGithubAlt } from 'react-icons/vsc';
-import { BiDotsHorizontalRounded } from 'react-icons/bi'
+import { Linkedin } from '../Links/Linkedin';
+import { Twitter } from '../Links/Twitter';
+import { Github } from '../Links/Github';
 
+
+import { AppTheme } from '../../context/WebTheme/AppTheme';
 
 const Navigation = () => {
 
     const [width, setWidth] = useState(window.innerWidth);
     const [showMobileMenu, handleMobileMenu] = useState(false);
+    const [activeComponent, setActiveComponent] = useState('AboutMe');
+
+    const { defaultTheme, handleAppTheme } = useContext(AppTheme);
 
     const handleButtonMobileMenu = () => {
         handleMobileMenu(!showMobileMenu);
+    };
+
+    const handleSetActiveComponent = (component) => {
+        setActiveComponent(component);
+    };
+
+    const toggleTheme = () => {
+        handleAppTheme(!defaultTheme);
     };
 
     useEffect(() => {
@@ -27,19 +39,22 @@ const Navigation = () => {
     
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
     
 
-    return (
-        <nav className="w-full p-2 h-auto bg-slate-600 border-b-[1px] border-slate-400 flex md:border-none md:justify-center md:flex-col md:w-2/6 md:h-screen xl:w-1/6">
+    const activeComponentStyle = 'border-r-[1px] border-gray-900 dark:border-gray-200';
 
-            <div className="navigationContent w-full flex justify-between items-center md:h-screen md:flex-col md:justify-center">
-                <div className="navLogo w-20 md:w-32">
+    return (
+        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:border-none md:flex-col md:w-2/6 md:h-screen xl:w-1/6">
+
+            <div className="navigationContent w-full flex items-center justify-between md:justify-normal md:h-screen md:flex-col">
+                <div className="navLogo w-20 md:w-32 md:bg-slate-500 md:rounded-md dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
                     />
                 </div>
-                <div className="navMenu w-full">
+                <div className="navMenu md:w-full md:h-full">
                     {
                         width < 1024 ?
                         <div className="mobileMenuContainer">
@@ -61,43 +76,50 @@ const Navigation = () => {
                             </div>
                         </div>
                         :
-                        <div className='desktopNavigationContainer w-full flex flex-col justify-around items-center'>
+                        <div className='desktopNavigationContainer h-full flex flex-col justify-between items-center'>
                             
-                            <div className="desktopNavigationSocialContainer w-full m-5 flex justify-around items-center">
-                                <div className="desktopNavigationSocialLinkedin">
-                                    <a href="/"><SlSocialLinkedin /></a>
-                                </div>
-                                <div className="desktopNavigationSocialTwitter">
-                                    <a href="/"><RxTwitterLogo /></a>
-                                </div>
-                                <div className="desktopNavigationSocialGitHub">
-                                    <a href="/"><VscGithubAlt /></a>
-                                </div>
-                            </div>
-
                             <div className="desktopNavigationLinksContainer w-full flex flex-col justify-around items-center">
-                                <div className="desktopNavigationLinkAboutMe w-[104.5%] h-10 my-2 text-slate-200 font-semibold tracking-widest focus:outline-none hover:bg-gray-500">
-                                    <button className='text-md bg-dark w-full p-2 tracking-widest'>
+                                <div className={`desktopNavigationLinkAboutMe w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'AboutMe' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('AboutMe')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
                                         About Me
                                     </button>
                                 </div>
-                                <div className="desktopNavigationLinkProjects w-[104.5%] h-10 my-2 text-slate-200 font-semibold tracking-widest focus:outline-none hover:bg-gray-500">
-                                    <button className='text-md w-full p-2 tracking-widest'>
+                                <div className={`desktopNavigationLinkProjects w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Projects' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('Projects')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
                                         Projects
                                     </button>
                                 </div>
-                                <div className="desktopNavigationLinkSkills w-[104.5%] h-10 my-2 text-slate-200 font-semibold tracking-widest focus:outline-none hover:bg-gray-500">
-                                    <button className='text-md w-full p-2 tracking-widest'>
+                                <div className={`desktopNavigationLinkSkills w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Skills' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('Skills')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
                                         Skills
                                     </button>
                                 </div>
-                                <div className="desktopNavigationLinkResume w-[104.5%] h-10 my-2 text-slate-200 font-semibold tracking-widest focus:outline-none hover:bg-gray-500">
-                                    <button className='text-md w-full p-2 tracking-widest'>
+                                <div className={`desktopNavigationLinkResume w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Resume' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('Resume')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
                                         Resume
                                     </button>
                                 </div>
                             </div>
 
+                            <div className="desktopNavigationSocialContainer relative top-0 text-2xl w-full m-5 flex justify-around items-center">
+                                <div className="desktopNavigationSocialLinkedin">
+                                    <Linkedin />
+                                </div>
+                                <div className="desktopNavigationSocialTwitter">
+                                    <Twitter />
+                                </div>
+                                <div className="desktopNavigationSocialGitHub">
+                                    <Github />
+                                </div>
+                            </div>
                         </div>
                         }
                 </div>

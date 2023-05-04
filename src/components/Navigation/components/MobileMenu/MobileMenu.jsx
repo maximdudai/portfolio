@@ -3,11 +3,11 @@ import { RiMenuUnfoldLine } from 'react-icons/ri';
 import MaxDev from '../../../../assets/maxdev-logo.png';
 import './Style/MobileMenuStyle.scss'
 
-
-import { SlSocialLinkedin } from 'react-icons/sl';
-import { RxTwitterLogo } from 'react-icons/rx';
-import { VscGithubAlt } from 'react-icons/vsc';
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
+
+import { Github } from '../../../Links/Github';
+import { Linkedin } from '../../../Links/Linkedin';
+import { Twitter } from '../../../Links/Twitter';
 
 const MobileMenu = ({ toggleMobileMenu }) => {
     return (
@@ -34,44 +34,32 @@ const MobileMenu = ({ toggleMobileMenu }) => {
 
                 </div>
 
-                <div className="mobileMenuContainer w-full h-full flex flex-col justify-evenly">
+                <div className="mobileMenuContainer p-4 w-full h-full flex flex-col justify-evenly">
         
                     <div className="mobileMenuSocialContainer w-full flex flex-col items-center">
                         
-                        <div className="mobileMenuSocialTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
+                        <div className="mobileMenuSocialTitle text-center w-full p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
                             <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest text-gray-200'>social links</h2>
                         </div>
 
                         <div className="mobileMenuSocialContent w-full flex justify-evenly mt-5">
                             <div className="mobileMenuSocialLinkedin">
                                 <button>
-                                    <a
-                                        className='text-2xl focus:outline-none'
-                                        href='https://www.linkedin.com/in/maxd-dev/'
-                                        target='noopener _blank'
-                                    ><SlSocialLinkedin /></a>
+                                    <Linkedin />
                                 </button>
                             </div>
 
                             
                             <div className="mobileMenuSocialTwitter">
                                 <button>
-                                    <a
-                                        className='text-2xl focus:outline-none'
-                                        href='https://twitter.com/maximdudai11'
-                                        target='noopener _blank'
-                                    ><RxTwitterLogo /></a>
+                                    <Twitter />
                                 </button>
                             </div>
 
                             
                             <div className="mobileMenuSocialGithub">
                                 <button>
-                                    <a
-                                        className='text-2xl focus:outline-none'
-                                        href='https://github.com/maximdudai'
-                                        target='noopener _blank'
-                                    ><VscGithubAlt /></a>
+                                    <Github />
                                 </button>
                             </div>
                         </div>
@@ -79,48 +67,48 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                     </div>
 
                     <div className="mobileMenuContainer w-full flex flex-col items-center">
-                        <div className="mobileMenuPageTitle text-center w-3/5 p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
+                        <div className="mobileMenuPageTitle text-center w-full p-2 border-b-[1px] border-orange-400 bg-slate-600 rounded-md dark:bg-transparent dark:rounded-none">
                             <h2 className='mobileMenuSocialLinkContent uppercase font-semibold tracking-widest text-gray-200'>Explore</h2>
                         </div>
 
                         <div className="mobileMenuPageAboutMe w-full flex justify-center">
                             <button
-                                className='flex w-full justify-around items-center py-2'
+                                className='flex w-full justify-between items-center py-2'
                             >
-                                <span className='w-16 font-semibold text-left'>About Me</span>
+                                <span className='w-auto font-semibold text-left'>About Me</span>
                                 <span><BiDotsHorizontalRounded /></span>
                             </button>
 
                         </div>
                         <div className="mobileMenuPageProjects w-full flex justify-center">
                             <button
-                                className='flex w-full justify-around items-center py-2'
+                                className='flex w-full justify-between items-center py-2'
                             >
-                                <span className='w-16 font-semibold text-left'>Projects</span>
+                                <span className='w-auto font-semibold text-left'>Projects</span>
                                 <span><BiDotsHorizontalRounded /></span>
                             </button>
                         </div>
                         <div className="mobileMenuPageSkills w-full flex justify-center">
                             <button
-                                className='flex w-full justify-around items-center py-2'
+                                className='flex w-full justify-between items-center py-2'
                             >
-                                <span className='w-16 font-semibold text-left'>Skills</span>
+                                <span className='w-auto font-semibold text-left'>Skills</span>
                                 <span><BiDotsHorizontalRounded /></span>
                             </button>
                         </div>
                         <div className="mobileMenuPageResume w-full flex justify-center">
                             <button
-                                className='flex w-full justify-around items-center py-2'
+                                className='flex w-full justify-between items-center py-2'
                             >
-                                <span className='w-16 font-semibold text-left'>Resume</span>
+                                <span className='w-auto font-semibold text-left'>Resume</span>
                                 <span><BiDotsHorizontalRounded /></span>
                             </button>
                         </div>
                     </div>
 
-                    <div className="mobileMenuContactMe w-full flex justify-center">
+                    <div className="mobileMenuContactMe mb-5 w-full flex justify-center">
                         <button
-                            className='font-semibold tracking-widest border-[1px] w-3/5 p-2 rounded-lg bg-slate-600 dark:bg-transparent text-gray-200'    
+                            className='font-semibold tracking-widest border-[1px] w-full p-2 rounded-lg bg-slate-600 dark:bg-transparent text-gray-200'    
                         >
                             Contact Me!
                         </button>
