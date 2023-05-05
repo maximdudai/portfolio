@@ -13,7 +13,7 @@ import { Github } from '../Links/Github';
 
 import { AppTheme } from '../../context/WebTheme/AppTheme';
 
-const Navigation = () => {
+const Navigation = ({ selectedComponent }) => {
 
     const [width, setWidth] = useState(window.innerWidth);
     const [showMobileMenu, handleMobileMenu] = useState(false);
@@ -27,6 +27,8 @@ const Navigation = () => {
 
     const handleSetActiveComponent = (component) => {
         setActiveComponent(component);
+
+        selectedComponent(component);
     };
 
     const toggleTheme = () => {
@@ -47,13 +49,15 @@ const Navigation = () => {
     return (
         <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:border-none md:flex-col md:w-2/6 md:h-screen xl:w-1/6">
 
-            <div className="navigationContent w-full flex items-center justify-between md:justify-normal md:h-screen md:flex-col">
+            <div className="navigationContainer w-full flex items-center justify-between md:justify-normal md:h-screen md:flex-col">
+                    
                 <div className="navLogo w-20 md:w-32 md:bg-slate-500 md:rounded-md dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
                     />
                 </div>
+
                 <div className="navMenu md:w-full md:h-full">
                     {
                         width < 1024 ?
@@ -79,28 +83,28 @@ const Navigation = () => {
                         <div className='desktopNavigationContainer h-full flex flex-col justify-between items-center'>
                             
                             <div className="desktopNavigationLinksContainer w-full flex flex-col justify-around items-center">
-                                <div className={`desktopNavigationLinkAboutMe w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'AboutMe' ? activeComponentStyle : ''}`}>
+                                <div className={`desktopNavigationLinkAboutMe w-[105%] h-12 ${activeComponent === 'AboutMe' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'AboutMe' ? activeComponentStyle : ''}`}>
                                     <button 
                                         onClick={() => handleSetActiveComponent('AboutMe')}
                                         className='text-md w-full h-full p-2 tracking-widest'>
                                         About Me
                                     </button>
                                 </div>
-                                <div className={`desktopNavigationLinkProjects w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Projects' ? activeComponentStyle : ''}`}>
+                                <div className={`desktopNavigationLinkProjects w-[105%] h-12 ${activeComponent === 'Projects' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Projects' ? activeComponentStyle : ''}`}>
                                     <button 
                                         onClick={() => handleSetActiveComponent('Projects')}
                                         className='text-md w-full h-full p-2 tracking-widest'>
                                         Projects
                                     </button>
                                 </div>
-                                <div className={`desktopNavigationLinkSkills w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Skills' ? activeComponentStyle : ''}`}>
+                                <div className={`desktopNavigationLinkSkills w-[105%] h-12 ${activeComponent === 'Skills' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Skills' ? activeComponentStyle : ''}`}>
                                     <button 
                                         onClick={() => handleSetActiveComponent('Skills')}
                                         className='text-md w-full h-full p-2 tracking-widest'>
                                         Skills
                                     </button>
                                 </div>
-                                <div className={`desktopNavigationLinkResume w-[105%] h-12 text-gray-400 font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-gray-900 dark:border-gray-200 ${activeComponent === 'Resume' ? activeComponentStyle : ''}`}>
+                                <div className={`desktopNavigationLinkResume w-[105%] h-12 ${activeComponent === 'Resume' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Resume' ? activeComponentStyle : ''}`}>
                                     <button 
                                         onClick={() => handleSetActiveComponent('Resume')}
                                         className='text-md w-full h-full p-2 tracking-widest'>
