@@ -35,8 +35,10 @@ const Navigation = ({ selectedComponent }) => {
         setActiveComponent(component);
         selectedComponent(component);
 
-        if (!isPlaying)
+        if (!isPlaying) {
             clickSound.play();
+        }
+            
 
         setIsPlaying(false);
 
@@ -62,7 +64,7 @@ const Navigation = ({ selectedComponent }) => {
 
             <div className="navigationContainer w-full flex items-center justify-between md:justify-normal md:h-screen md:flex-col">
                     
-                <div className="navLogo w-20 md:w-32 md:bg-slate-500 md:rounded-md dark:bg-transparent">
+                <div className="navLogo w-20 md:w-64 md:bg-black/70 md:rounded-md dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
@@ -138,6 +140,11 @@ const Navigation = ({ selectedComponent }) => {
                         </div>
                         }
                 </div>
+                <button
+                    onClick={toggleTheme}
+                >
+                    toggle
+                </button>
             </div>
 
         </nav>
