@@ -10,6 +10,7 @@ import { Linkedin } from '../Links/Linkedin';
 import { Twitter } from '../Links/Twitter';
 import { Github } from '../Links/Github';
 
+import clickAudio from '../../assets/sounds/click-sound.mp3'
 
 import { AppTheme } from '../../context/WebTheme/AppTheme';
 
@@ -19,6 +20,9 @@ const Navigation = ({ selectedComponent }) => {
     const [showMobileMenu, handleMobileMenu] = useState(false);
     const [activeComponent, setActiveComponent] = useState('AboutMe');
 
+    const [isPlaying, setIsPlaying] = useState(false);
+    const clickSound = new Audio(clickAudio);
+
     const { defaultTheme, handleAppTheme } = useContext(AppTheme);
 
     const handleButtonMobileMenu = () => {
@@ -26,9 +30,16 @@ const Navigation = ({ selectedComponent }) => {
     };
 
     const handleSetActiveComponent = (component) => {
-        setActiveComponent(component);
+        if(activeComponent === component) return;
 
+        setActiveComponent(component);
         selectedComponent(component);
+
+        if (!isPlaying)
+            clickSound.play();
+
+        setIsPlaying(false);
+
     };
 
     const toggleTheme = () => {
