@@ -16,11 +16,11 @@ const AboutMe = () => {
 
     return (
         <>
-            <div className="personalPortfolioAboutMe h-screen lg:h-auto lg:w-1/2">
+            <div className="personalPortfolioAboutMe h-full lg:h-auto lg:w-1/2">
                 <div className="aboutMeComponentContainer">
                     <div className={`boutMeComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Description</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Description</span>
                             <span>
                                 Hi, I&#39;m Maxim, a dedicated and detail-oriented Front-End Web Developer with a passion for creating user-friendly and visually appealing web solutions. 
                                 I am constantly looking to enhance my skills and knowledge to keep pace with the latest trends and best practices in the industry.
@@ -31,8 +31,8 @@ const AboutMe = () => {
                 
                 <div className="languagesContainer">
                     <div className={`languagesDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Social Media</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Social Media</span>
                             <span>
                                 <ul className='flex items-center gap-2 mt-2'>
                                     <li className='p-2 bg-white/5 rounded-lg'><Linkedin /> </li>
@@ -49,8 +49,8 @@ const AboutMe = () => {
 
                 <div className="computerLanguagesContainer">
                     <div className={`computerLanguagesComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Languages</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Languages</span>
                             <span>
                                 <ul>
                                     <li>&gt; <a className='border-b' target='noreferrer _blank' href="https://en.wikipedia.org/wiki/Romanian_language">Romanian</a></li>
@@ -64,8 +64,8 @@ const AboutMe = () => {
 
                 <div className="locationContainer mt-5">
                     <div className={`locationComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Location</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Location</span>
                             <a 
                                 href='https://goo.gl/maps/u49o5CZxcUck8Pwp9'
                                 target='noreferrer _blank'
@@ -79,8 +79,8 @@ const AboutMe = () => {
 
                 <div className="personalSkillsContainer mt-5">
                     <div className={`personalSkillsComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Networking skills</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Networking skills</span>
                             <span>
                                 <ul>
                                     <li>&gt; Adaptability</li>
@@ -97,8 +97,8 @@ const AboutMe = () => {
 
                 <div className="personalInterestsContainer mt-5">
                     <div className={`personalInterestsComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-sm">Interests</span>
+                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-md lg:text-sm">Interests</span>
                             <span>
                                 <ul>
                                     <li>&gt; Video Games <span className="text-gray-400 text-[10px]">GTA V, CS:GO, PUBG</span></li>
