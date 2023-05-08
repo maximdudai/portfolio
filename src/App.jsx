@@ -14,7 +14,7 @@ function App() {
     };
 
     return (
-        <div className={`personalPortfolio h-auto w-full flex flex-col md:flex-row dark:bg-dark dark:text-gray-200`}>
+        <div className={`personalPortfolio h-auto w-full flex flex-col lg:flex-row dark:bg-dark dark:text-gray-200`}>
             <Navigation selectedComponent={handleShowingComponent}/>
             <MainContent showingPage={showingComponent}/>
 

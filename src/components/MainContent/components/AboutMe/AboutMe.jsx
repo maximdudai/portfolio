@@ -16,7 +16,7 @@ const AboutMe = () => {
 
     return (
         <>
-            <div className="personalPortfolioAboutMe h-auto md:w-1/2">
+            <div className="personalPortfolioAboutMe h-screen lg:h-auto lg:w-1/2">
                 <div className="aboutMeComponentContainer">
                     <div className={`boutMeComponentDescription ${backgroundElementStyle} mt-5`}>
                         <p className={`text-sm ${elementBorderStyle} flex flex-col`}>

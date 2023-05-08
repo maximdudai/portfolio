@@ -60,18 +60,18 @@ const Navigation = ({ selectedComponent }) => {
     const activeComponentStyle = 'border-r-[1px] border-gray-900 dark:border-gray-200';
 
     return (
-        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:border-none md:flex-col md:w-2/6 md:h-screen xl:w-1/6">
+        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 md:border-none">
 
-            <div className="navigationContainer w-full flex items-center justify-between md:justify-normal md:h-screen md:flex-col">
+            <div className="navigationContainer w-full h-full flex items-center justify-between lg:justify-normal lg:flex-col">
                     
-                <div className="navLogo w-20 md:w-64 md:bg-black/70 md:rounded-md dark:bg-transparent">
+                <div className="navLogo w-20 lg:w-64 md:bg-black/70 md:rounded-md dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
                     />
                 </div>
 
-                <div className="navMenu md:w-full md:h-full">
+                <div className="navMenu lg:w-full lg:h-full">
                     {
                         width < 1024 ?
                         <div className="mobileMenuContainer">
@@ -126,7 +126,7 @@ const Navigation = ({ selectedComponent }) => {
                                 </div>
                             </div>
 
-                            <div className="desktopNavigationSocialContainer relative top-0 text-2xl w-full m-5 flex justify-around items-center">
+                            <div className="desktopNavigationSocialContainer w-full relative top-0 text-2xl m-5 flex justify-around items-center">
                                 <div className="desktopNavigationSocialLinkedin">
                                     <Linkedin />
                                 </div>
@@ -140,11 +140,11 @@ const Navigation = ({ selectedComponent }) => {
                         </div>
                         }
                 </div>
-                <button
+                {/* <button
                     onClick={toggleTheme}
                 >
                     toggle
-                </button>
+                </button> */}
             </div>
 
         </nav>

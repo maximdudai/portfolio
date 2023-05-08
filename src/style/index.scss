@@ -4,7 +4,9 @@ body {
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    font-family: 'JetBrains Mono', sans-serif;
+font-family: 'JetBrains Mono', sans-serif;
 
-    overflow: hidden;
+    @media screen and (min-width: 640px) {
+        overflow: hidden;
+    }
 }
