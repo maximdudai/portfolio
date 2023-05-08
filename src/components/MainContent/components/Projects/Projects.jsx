@@ -1,7 +1,9 @@
 const Projects = () => {
     return (
         <>
-        
+            <div className="portfolioProjects">
+                Under Development
+            </div>        
         </>
     )
 };

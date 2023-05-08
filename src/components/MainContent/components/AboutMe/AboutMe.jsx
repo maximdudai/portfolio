@@ -1,6 +1,13 @@
 
 import { CiLocationOn } from 'react-icons/ci';
 
+import { Linkedin } from '../../../Links/Linkedin';
+import { Twitter } from '../../../Links/Twitter';
+import { Github } from '../../../Links/Github';
+import { Twitch } from '../../../Links/Twitch';
+import { Instagram } from '../../../Links/Instagram';
+import { Discord } from '../../../Links/Discord';
+
 const AboutMe = () => {
 
     const elementBorderStyle = 'border-l-[1px] border-orange-400 p-2';
@@ -10,7 +17,6 @@ const AboutMe = () => {
     return (
         <>
             <div className="personalPortfolioAboutMe h-auto md:w-1/2">
-
                 <div className="aboutMeComponentContainer">
                     <div className={`boutMeComponentDescription ${backgroundElementStyle} mt-5`}>
                         <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
@@ -22,9 +28,27 @@ const AboutMe = () => {
                         </p>
                     </div>
                 </div>
-
+                
                 <div className="languagesContainer">
-                    <div className={`languagesComponentDescription ${backgroundElementStyle} mt-5`}>
+                    <div className={`languagesDescription ${backgroundElementStyle} mt-5`}>
+                        <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
+                            <span className="text-gray-400 text-sm">Social Media</span>
+                            <span>
+                                <ul className='flex items-center gap-2 mt-2'>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Linkedin /> </li>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Github /> </li>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Twitter /> </li>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Twitch /> </li>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Instagram /> </li>
+                                    <li className='p-2 bg-white/5 rounded-lg'><Discord /> </li>
+                                </ul>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+
+                <div className="computerLanguagesContainer">
+                    <div className={`computerLanguagesComponentDescription ${backgroundElementStyle} mt-5`}>
                         <p className={`text-sm ${elementBorderStyle} flex flex-col`}>
                             <span className="text-gray-400 text-sm">Languages</span>
                             <span>
@@ -79,7 +103,7 @@ const AboutMe = () => {
                                 <ul>
                                     <li>&gt; Video Games <span className="text-gray-400 text-[10px]">GTA V, CS:GO, PUBG</span></li>
                                     <li>&gt; Tech Industry <span className="text-gray-400 text-[10px]">Software Development</span></li>
-                                    <li>&gt; New Technologies <span className="text-gray-400 text-[10px]">Gadgets</span></li>
+                                    <li>&gt; New Technologies <span className="text-gray-400 text-[10px]">Gadgets, Consoles</span></li>
                                     <li >&gt; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Ping Pong, Badminton</span></li>
                                 </ul>
                             </span>
