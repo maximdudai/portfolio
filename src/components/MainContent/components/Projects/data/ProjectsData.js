@@ -1,12 +1,11 @@
 import mandachiProject from '../assets/mandachi-project.png';
-import bookShop from '../assets/book-shop.png';
-import githubSearch from '../assets/github-search.png';
-import moneyConvert from '../assets/money-convert.png';
+import bookShop from '../assets/bookShop-project.png';
+import githubSearch from '../assets/githubSearch.png';
+import currencyConvert from '../assets/moneyConverter.png';
 
 export const personalProjects = [
     {
-        id: 1,
-        imageURL: `${mandachiProject}`,
+        imageURL: mandachiProject,
         projectName: "Mandachi Hotel",
         description: "",
         github: "",
@@ -18,38 +17,35 @@ export const personalProjects = [
         
     },
     {
-        id: 2,
-        imageURL: `${bookShop}`,
-        projectName: "bookShop",
+        imageURL: bookShop,
+        projectName: "eBook Shop",
         description: "",
         github: "",
         liveVersion: "",
         stack: [
             "HTML",
             "CSS",
-            "JavaScript",
+            "js",
             "Bootstrap",
-            "PHP7",
+            "php",
             "MySQL"
         ]
     },
     {
-        id: 3,
-        imageURL: `${moneyConvert}`,
-        projectName: "Github Search",
+        imageURL: currencyConvert,
+        projectName: "Currency Converter",
         description: "",
         github: "",
         liveVersion: "",
         stack: [
             "React",
             "TailwindCSS",
-            "REST API",
+            "RESTAPI",
             "AXIOS"
         ]
     },
     {
-        id: 4,
-        imageURL: `${githubSearch}`,
+        imageURL: githubSearch,
         projectName: "Github Search",
         description: "",
         github: "",
@@ -57,7 +53,7 @@ export const personalProjects = [
         stack: [
             "React",
             "TailwindCSS",
-            "REST API",
+            "RESTAPI",
             "AXIOS"
         ]
     }

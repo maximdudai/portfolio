@@ -31,7 +31,7 @@ const AboutMe = () => {
                 
                 <div className="languagesContainer">
                     <div className={`languagesDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                        <div className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
                             <span className="text-gray-400 text-md lg:text-sm">Social Media</span>
                             <span>
                                 <ul className='flex items-center gap-2 mt-2'>
@@ -43,13 +43,13 @@ const AboutMe = () => {
                                     <li className='p-2 bg-white/5 rounded-lg'><Discord /> </li>
                                 </ul>
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
                 <div className="computerLanguagesContainer">
                     <div className={`computerLanguagesComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                        <div className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
                             <span className="text-gray-400 text-md lg:text-sm">Languages</span>
                             <span>
                                 <ul>
@@ -58,7 +58,7 @@ const AboutMe = () => {
                                     <li>&gt; <a className='border-b' target='noreferrer _blank' href="https://en.wikipedia.org/wiki/English_language">English</a></li>
                                 </ul>
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@ const AboutMe = () => {
 
                 <div className="personalSkillsContainer mt-5">
                     <div className={`personalSkillsComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                        <div className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
                             <span className="text-gray-400 text-md lg:text-sm">Networking skills</span>
                             <span>
                                 <ul>
@@ -91,13 +91,13 @@ const AboutMe = () => {
                                     <li>&gt; Continuous learning</li>
                                 </ul>
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
                 <div className="personalInterestsContainer mt-5">
                     <div className={`personalInterestsComponentDescription ${backgroundElementStyle} mt-5`}>
-                        <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
+                        <div className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
                             <span className="text-gray-400 text-md lg:text-sm">Interests</span>
                             <span>
                                 <ul>
@@ -107,7 +107,7 @@ const AboutMe = () => {
                                     <li >&gt; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Ping Pong, Badminton</span></li>
                                 </ul>
                             </span>
-                        </p>
+                        </div>
                     </div>
                 </div>
 
