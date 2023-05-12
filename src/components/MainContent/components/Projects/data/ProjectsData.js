@@ -7,9 +7,9 @@ export const personalProjects = [
     {
         imageURL: mandachiProject,
         projectName: "Mandachi Hotel",
-        description: "",
-        github: "",
-        liveVersion: "",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        githubURL: "https://github.com/maximdudai/mandachi",
+        liveVersion: "https://maximdudai.github.io/mandachi/",
         stack: [
             "HTML",
             "CSS"
@@ -19,24 +19,24 @@ export const personalProjects = [
     {
         imageURL: bookShop,
         projectName: "eBook Shop",
-        description: "",
-        github: "",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        githubURL: "https://github.com/maximdudai/eBooks-Shop",
         liveVersion: "",
         stack: [
             "HTML",
             "CSS",
-            "js",
+            "JavaScript",
             "Bootstrap",
-            "php",
+            "PHP",
             "MySQL"
         ]
     },
     {
         imageURL: currencyConvert,
         projectName: "Currency Converter",
-        description: "",
-        github: "",
-        liveVersion: "",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        githubURL: "https://github.com/maximdudai/currency-convert",
+        liveVersion: "https://maxdev-currency.netlify.app/",
         stack: [
             "React",
             "TailwindCSS",
@@ -47,9 +47,9 @@ export const personalProjects = [
     {
         imageURL: githubSearch,
         projectName: "Github Search",
-        description: "",
-        github: "",
-        liveVersion: "",
+        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        githubURL: "https://github.com/maximdudai/React/tree/main/github-search",
+        liveVersion: "https://maxdev-gitsrch.netlify.app/",
         stack: [
             "React",
             "TailwindCSS",

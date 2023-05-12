@@ -17,7 +17,7 @@ const logoMap = {
     bootstrap: bootstrapLogo,
     css: cssLogo,
     html: htmlLogo,
-    js: jsLogo,
+    javascript: jsLogo,
     react: reactLogo,
     sass: sassLogo,
     tailwindcss: tailwindLogo,
