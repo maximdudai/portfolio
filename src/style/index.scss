@@ -6,7 +6,5 @@ body {
     user-select: none;
     font-family: 'JetBrains Mono', sans-serif;
 
-    @media screen and (max-width: 640px) {
-        // overflow: hidden;
-    }
+    overflow: auto;
 }
