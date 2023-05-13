@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react'
 
 
-import mandachiProject from './assets/mandachi-project.png';
-import bookShop from './assets/bookShop-project.png';
-import githubSearch from './assets/githubSearch.png';
-import moneyConverter from './assets/moneyConverter.png';
+import { personalProjects } from './data/ProjectsData';
 
 import ProjectMobile from './ProjectMobile/ProjectMobile';
 import './style/project.style.scss';
+import { ImageCarousel } from './ImageCarousel/ImageCarousel';
 
 const Projects = () => {
     const [width, setWidth] = useState(window.innerWidth);
@@ -21,6 +19,7 @@ const Projects = () => {
     const onUserCloseProjectPage = () => {
         setSelectedProject(null);
     };
+
 
     useEffect(() => {
         const handleResize = () => setWidth(window.innerWidth);
@@ -36,85 +35,35 @@ const Projects = () => {
         <>
             <div className="portfolioProjects w-full h-full flex items-center">
                 <div className="projectsContainer md:mt-0 flex">
-                    <div className="projectContainerList w-full md:w-1/3 lg:w-1/4">
-                        <div className="projectsList p-3 overflow-auto md:max-h-[40rem]">
+                    <div className="projectContainerList w-full lg:w-2/6">
+                        <div className={`projectsList p-3 overflow-y-auto max-h-[50rem]`}>
                             <ul>
-                                <li>
-                                    <button 
-                                        onClick={() => handleSelectedProject(1)}
-                                        className={`project ${projectContainerStyle}`}>
-                                        <div className="projectImage">
-                                            
-                                            <img 
-                                                className={projectContainerImage} 
-                                                src={mandachiProject} 
-                                                alt="Mandachi Project" />
+                                {personalProjects.map((item, index) => (
+                                    <li
+                                        key={index}
+                                    >
+                                        <button 
+                                            onClick={() => handleSelectedProject(index)}
+                                            className={`project ${projectContainerStyle}`}>
+                                            <div className="projectImage">
+                                                
+                                                <img 
+                                                    className={`${projectContainerImage}`}
+                                                    src={personalProjects[index].imageURL} 
+                                                    alt="Mandachi Project" />
 
-                                        </div>
-                                        <div className="projectTitle uppercase tracking-widest">
-                                            Mandachi Hotel
-                                        </div>
-                                    </button>
-                                </li>
-
-                                <li>
-                                    <button 
-                                        onClick={() => handleSelectedProject(2)}
-                                        className={`project ${projectContainerStyle}`}>
-                                        <div className="projectImage">
-                                            
-                                            <img 
-                                                className={projectContainerImage} 
-                                                src={bookShop} 
-                                                alt="bookShop Project" />
-
-                                        </div>
-                                        <div className="projectTitle uppercase tracking-widest">
-                                            eBook Shop
-                                        </div>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button 
-                                        onClick={() => handleSelectedProject(3)}
-                                        className={`project ${projectContainerStyle}`}>
-                                        <div className="projectImage">
-                                            
-                                            <img 
-                                                className={projectContainerImage} 
-                                                src={moneyConverter} 
-                                                alt="Mandachi Project" />
-
-                                        </div>
-                                        <div className="projectTitle uppercase tracking-widest">
-                                            Currency Converter
-                                        </div>
-                                    </button>
-                                </li>
-
-                                <li>
-                                    <button 
-                                        onClick={() => handleSelectedProject(4)}
-                                        className={`project ${projectContainerStyle}`}>
-                                        <div className="projectImage">
-                                            
-                                            <img 
-                                                className={projectContainerImage} 
-                                                src={githubSearch} 
-                                                alt="bookShop Project" />
-
-                                        </div>
-                                        <div className="projectTitle uppercase tracking-widest">
-                                            Github Search
-                                        </div>
-                                    </button>
-                                </li>
+                                            </div>
+                                            <div className="projectTitle uppercase tracking-widest">
+                                                {personalProjects[index].projectName}
+                                            </div>
+                                        </button>
+                                    </li>
+                                ))}
                             </ul>
-                            
                         </div>
                     </div>
-                    <div className="projectContainerSelected">
-                        <div className="selectedProject">
+                    <div className="projectContainerSelected w-full">
+                        <div className="selectedProject bg-white/50 dark:bg-dark w-auto h-[40rem] flex justify-center items-center">
                             {
                                 selectedProject !== null && width <= 1024? (
                                     <ProjectMobile 
@@ -123,9 +72,27 @@ const Projects = () => {
                                     />
 
                                 ) : (
-                                    <div className="selectedProjectDesktop">
+                                    selectedProject !== null? (
+                                    <div className="selectedProjectDesktop w-full">
+                                        
+                                        <div className="projectImage w-full p-5">
+                                            <ImageCarousel projectName='mandachi'/>                                            
+                                        </div>
+                                        
+                                        <div className="projectTitle uppercase tracking-widest">
+                                            {personalProjects[selectedProject]?.projectName}
+                                        </div>
 
                                     </div>
+                                    )
+                                    :
+                                    (
+                                        <div className="noProjectSelected w-96 h-96 border-4 border-double rounded flex justify-center items-center">
+                                            <span className='bg-white/25 dark:bg-black/25 p-2 rounded tracking-widest text-center cursor-wait'>
+                                                👈 choose one
+                                            </span>
+                                        </div>
+                                    )
                                 )
                             }
                         </div>
