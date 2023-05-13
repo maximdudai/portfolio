@@ -28,14 +28,14 @@ const logoMap = {
     restapi: restapiLogo
 };
 
-const AppStack = ({stack}) => {
+export const AppStack = ({stack}) => {
     const logoSrc = logoMap[stack] || null;
 
     return (
         <>
             <div className="appStackIcon">
                 {logoSrc && <img 
-                    className='w-[32px]'
+                    className='w-[32px] md:w-[16px]'
                     src={logoSrc} 
                     alt={stack} 
                 />}
@@ -46,4 +46,3 @@ const AppStack = ({stack}) => {
 AppStack.propTypes = {
     stack: PropTypes.string
 }
-export default AppStack;

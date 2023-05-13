@@ -21,11 +21,17 @@ import mandachiImage4 from '../assets/project-image/mandachiProject/mandachiProj
 import mandachiImage5 from '../assets/project-image/mandachiProject/mandachiProject-5.png';
 import mandachiImage6 from '../assets/project-image/mandachiProject/mandachiProject-6.png';
 
+import currencyImage1 from '../assets/project-image/CurrencyConvert/CurrencyConvertProject-1.png';
+import currencyImage2 from '../assets/project-image/CurrencyConvert/CurrencyConvertProject-2.png';
+
+import githubImage1 from '../assets/project-image/GithubSearch/GitHubProject-1.png';
+import githubImage2 from '../assets/project-image/GithubSearch/GitHubProject-2.png';
+
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 
 
 const imagesPath = {
-  bookShop: [
+  ebookshop: [
     bookShopImage1, 
     bookShopImage2,
     bookShopImage3,
@@ -38,7 +44,7 @@ const imagesPath = {
     bookShopImage10,
     bookShopImage11
 ],
-  mandachi: [
+  mandachihotel: [
     mandachiImage1,
     mandachiImage2,
     mandachiImage3,
@@ -46,30 +52,38 @@ const imagesPath = {
     mandachiImage5,
     mandachiImage6,
   ],
+  currencyconverter: [
+    currencyImage1,
+    currencyImage2,
+  ],
+  githubsearch: [
+    githubImage1,
+    githubImage2,
+  ]
 };
 
-export const ImageCarousel = ({ projectName, imageSize }) => {
+export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
     const projectImages = imagesPath[projectName];
-  
+
     if (!projectImages) {
       return null;
     }
 
     return (
-        <div className="imageCarousel">
+        <div className="imageCarousel w-full md:w-[80%] flex justify-center items-center">
             <Carousel
-                className='flex flex-col justify-center'
+                className='w-full flex flex-col justify-center items-center'
                 NextIcon={<GrFormNext className='bg-gray-400/50 rounded-full' />}
                 PrevIcon={<GrFormPrevious className='bg-gray-400/50 rounded-full' />}
             >
                 {projectImages.map((item, index) => (
                     <div 
-                        className={`imageSlide`}
+                        className={`imageSlide rounded-lg`}
                         style={{ 
                             width: `${imageSize}%`,
-                            height: `50vh`,
-                            background: `url('${item}')`,
-                            backgroundSize: 'cover',
+                            height: `${screenWidth <= 1024? `30vh` : '50vh'}`,
+                            backgroundImage: `url('${item}')`,
+                            backgroundSize: '100% 100%',
                             backgroundRepeat: 'no-repeat',
                             backgroundPosition: 'center',
                         }}
@@ -82,6 +96,7 @@ export const ImageCarousel = ({ projectName, imageSize }) => {
 };
   
   ImageCarousel.propTypes = {
+    screenWidth: PropTypes.string,
     projectName: PropTypes.string.isRequired,
-    imageSize: PropTypes.string.isRequired,
+    imageSize: PropTypes.number,
   };

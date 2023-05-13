@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-
 import { Github } from '../../../../Links/Github';
 import { BsWindowFullscreen } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
 
-import AppStack from '../stack/AppStack.jsx';
+import { AppStack } from '../stack/AppStack.jsx';
 import { personalProjects } from '../data/ProjectsData';
+import { ImageCarousel } from '../ImageCarousel/ImageCarousel';
 
 const mobileSelectedProjectTitle = 'text-lg tracking-widest';
 
@@ -14,7 +14,7 @@ const ProjectMobile = ({selectedProject, onModalClose}) => {
 
     return (
         <>
-            <div className="selectProjectMobile fixed overflow-y-auto flex flex-col z-10 inset-0 p-2 bg-white dark:bg-dark dark:text-gray-200">
+            <div className="selectProjectMobile fixed overflow-y-auto flex flex-col z-20 inset-0 p-2 bg-white dark:bg-dark dark:text-gray-200">
 
                 <div className="mobileSelectedProjectCloseMenu w-full text-center">
                     <button
@@ -29,11 +29,8 @@ const ProjectMobile = ({selectedProject, onModalClose}) => {
                     <h3 className={`${mobileSelectedProjectTitle}`}>{personalProjects[selectedProject].projectName}</h3>
                 </div>
 
-                <div className="mobileSelectedProjectImage">
-                    <img 
-                        className="w-auto"
-                        src={personalProjects[selectedProject].imageURL} 
-                        alt="Project Image" />
+                <div className="mobileSelectedProjectImage w-full">
+                    <ImageCarousel screenWidth={'screen-sm'} projectName={personalProjects[selectedProject]?.projectName.split(' ').join('').toLowerCase()} imageSize={100} />
                 </div>
                 
                 <div className="mobileSelectedProjectLinks w-full flex flex-col bg-dark/25 dark:bg-white/5 text-center p-2 rounded my-4">

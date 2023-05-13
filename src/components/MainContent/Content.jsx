@@ -1,7 +1,6 @@
-
+import PropTypes from 'prop-types';
 import { Suspense, lazy } from 'react'
 
-// import { ReactSketchCanvas } from 'react-sketch-canvas';
 
 const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
@@ -12,7 +11,7 @@ const MainContent = ({ showingPage }) => {
 
     return (
         <>
-            <div className="portfolioContainer p-5 w-full h-full lg:h-screen text-gray-900 dark:text-gray-200">
+            <div className="portfolioContainer p-5 w-full lg:h-screen text-gray-900 dark:text-gray-200">
                 <Suspense fallback={<div>Loading...</div>}>
                     { showingPage === 'AboutMe' && <AboutMe /> }
                     { showingPage === 'Projects' && <Projects /> }
@@ -24,3 +23,7 @@ const MainContent = ({ showingPage }) => {
     )
 };
 export default MainContent;
+
+MainContent.propTypes = {
+    showingPage: PropTypes.string
+}
