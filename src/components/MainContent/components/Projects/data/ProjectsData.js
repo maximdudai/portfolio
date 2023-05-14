@@ -7,7 +7,7 @@ export const personalProjects = [
     {
         imageURL: mandachiProject,
         projectName: "Mandachi Hotel",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        description: "The project replicates the Hotel Mandachi website to improve UI/UX skills using front-end technologies."
         githubURL: "https://github.com/maximdudai/mandachi",
         liveVersion: "https://maximdudai.github.io/mandachi/",
         stack: [
@@ -19,7 +19,7 @@ export const personalProjects = [
     {
         imageURL: bookShop,
         projectName: "eBook Shop",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        description: "eBookShop provides users with easy access to a wide selection of books and a user-friendly shopping experience. Users can create an account, browse books, and make purchases using any device. Advanced search filters help users find specific books quickly. The website administrator has full control over user management and site maintenance.",
         githubURL: "https://github.com/maximdudai/eBooks-Shop",
         liveVersion: "",
         stack: [
@@ -34,7 +34,7 @@ export const personalProjects = [
     {
         imageURL: currencyConvert,
         projectName: "Currency Converter",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        description: "Exchange currency using exchange rates from the CoinMarketCap and CurrencyLayer APIs",
         githubURL: "https://github.com/maximdudai/currency-convert",
         liveVersion: "https://maxdev-currency.netlify.app/",
         stack: [
@@ -47,7 +47,7 @@ export const personalProjects = [
     {
         imageURL: githubSearch,
         projectName: "Github Search",
-        description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum inventore optio in incidunt pariatur? Aliquid earum culpa dolorem laboriosam vel?",
+        description: "The project leverages the power of the GitHub API to provide users with an easy and efficient way to view GitHub profile information without having to navigate to the GitHub website.",
         githubURL: "https://github.com/maximdudai/React/tree/main/github-search",
         liveVersion: "https://maxdev-gitsrch.netlify.app/",
         stack: [
