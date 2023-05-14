@@ -37,10 +37,10 @@ const Projects = () => {
 
     return (
         <>
-            <div className="portfolioProjects w-full h-screen md:h-screen lg:h-full lg:flex items-center">
+            <div className="portfolioProjects w-full h-full lg:h-full lg:flex items-center">
                 <div className="projectsContainer flex items-center">
                     <div className="projectContainerList w-full lg:w-2/6">
-                        <div className={`projectsList h-auto p-3 overflow-none md:overflow-y-auto lg:max-h-[50rem]`}>
+                        <div className={`projectsList h-full p-3 overflow-none md:overflow-y-auto lg:max-h-[50rem]`}>
                             <ul>
                                 {personalProjects.map((item, index) => (
                                     <li
