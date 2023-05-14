@@ -7,7 +7,7 @@ export const personalProjects = [
     {
         imageURL: mandachiProject,
         projectName: "Mandachi Hotel",
-        description: "The project replicates the Hotel Mandachi website to improve UI/UX skills using front-end technologies."
+        description: "The project replicates the Hotel Mandachi website to improve UI/UX skills using front-end technologies.",
         githubURL: "https://github.com/maximdudai/mandachi",
         liveVersion: "https://maximdudai.github.io/mandachi/",
         stack: [
