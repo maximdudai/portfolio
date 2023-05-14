@@ -32,7 +32,7 @@ const Projects = () => {
     }, []);
 
 
-    const projectContainerStyle = 'flex flex-col justify-between items-center bg-gray-400/5 rounded-md my-3';
+    const projectContainerStyle = 'flex flex-col justify-between items-center bg-black/25 dark:bg-gray-400/5 rounded-md my-3';
     const projectContainerImage = 'rounded-md p-3';
 
     return (
@@ -106,7 +106,7 @@ const Projects = () => {
                                     :
                                     (
                                         <div className="noProjectSelected w-96 h-96 border-4 border-double rounded flex justify-center items-center">
-                                            <span className='bg-white/25 dark:bg-black/25 p-2 rounded tracking-widest text-center cursor-wait'>
+                                            <span className='bg-black/25 dark:bg-black/25 p-2 rounded tracking-widest text-center cursor-wait'>
                                                 👈 choose one
                                             </span>
                                         </div>

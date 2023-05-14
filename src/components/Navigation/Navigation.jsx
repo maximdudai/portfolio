@@ -1,18 +1,20 @@
 
+import PropTypes from 'prop-types'
+
 import { useState, useEffect, useContext } from 'react';
 import { RiMenuFoldLine } from 'react-icons/ri';
-import MobileMenu from './components/MobileMenu/MobileMenu';
-import MaxDev from '../../assets/maxdev-logo.png';
-
-import './Style/NavigationStyle.scss';
-
 import { Linkedin } from '../Links/Linkedin';
 import { Twitter } from '../Links/Twitter';
 import { Github } from '../Links/Github';
-
-import clickAudio from '../../assets/sounds/click-sound.mp3'
-
 import { AppTheme } from '../../context/WebTheme/AppTheme';
+import clickAudio from '../../assets/sounds/click-sound.mp3'
+import MobileMenu from './components/MobileMenu/MobileMenu';
+import MaxDev from '../../assets/maxdev-logo.png';
+
+import LightTheme from './assets/light-mode.png';
+import DarkTheme from './assets/dark-mode.png';
+
+import './Style/NavigationStyle.scss';
 
 const Navigation = ({ selectedComponent }) => {
 
@@ -46,6 +48,7 @@ const Navigation = ({ selectedComponent }) => {
 
     const toggleTheme = () => {
         handleAppTheme(!defaultTheme);
+        console.log(defaultTheme);
     };
 
     useEffect(() => {
@@ -61,10 +64,19 @@ const Navigation = ({ selectedComponent }) => {
 
     return (
         <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 lg:border-none">
+            
+            <div className="changeAppDarkTheme">
+                <img 
+                    onClick={toggleTheme}
+                    className='fixed cursor-crosshair z-10 top-0 left-1 w-9 rotate-[180deg]'
+                    src={defaultTheme === 'light' ? DarkTheme : LightTheme}
+                    alt="App Theme" 
+                />
+            </div>
 
             <div className="navigationContainer w-full h-full flex items-center justify-between lg:justify-normal lg:flex-col">
                     
-                <div className="navLogo w-20 lg:w-64 md:bg-black/70 md:rounded-md dark:bg-transparent">
+                <div className="navLogo w-20 lg:w-2/3 md:bg-black/90 md:rounded-full md:p-4 md:dark:p-0 dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
@@ -151,3 +163,7 @@ const Navigation = ({ selectedComponent }) => {
     )
 };
 export default Navigation;
+
+Navigation.propTypes = { 
+    selectedProject: PropTypes.number
+};

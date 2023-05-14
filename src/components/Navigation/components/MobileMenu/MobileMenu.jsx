@@ -12,7 +12,7 @@ import { Twitter } from '../../../Links/Twitter';
 const MobileMenu = ({ toggleMobileMenu }) => {
     return (
         <>
-            <div className="mobileMenu overflow-hidden absolute inset-0 w-screen h-screen bg-gray-200 dark:bg-slate-800">
+            <div className="mobileMenu fixed overflow-hidden inset-0 w-screen h-screen bg-gray-200 dark:bg-slate-800">
                 <div className="mobileMenuNavbarContent w-full flex justify-between items-center p-2 px-3">
                     
                     <div className="mobileMenuCloseModal">
