@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 
-import { ProjectData } from '../data/ProjectsData';
+import { personalProjects } from '../data/ProjectsData';
 
 export const ProjectTitle = ({ selectedProject }) => {
     return (
         <>
-
+            <div className="projectTitle w-full md:w-1/2 uppercase tracking-widest bg-dark/25 dark:bg-white/5 text-center p-2 rounded my-4">
+                <h3>{personalProjects[selectedProject].projectName}</h3>
+            </div>
         </>
     )
 };

@@ -69,8 +69,10 @@ export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
       return null;
     }
 
+    const imageHeight = () => (screenWidth <= 1280? `30vh` : screenWidth <= 1024? `20vh` : `50vh`);
+
     return (
-        <div className="imageCarousel w-full md:w-[80%] flex justify-center items-center">
+        <div className="imageCarousel w-full lg:w-[85%] flex justify-center items-center">
             <Carousel
                 className='w-full flex flex-col justify-center items-center'
                 NextIcon={<GrFormNext className='bg-gray-400/50 rounded-full' />}
@@ -81,7 +83,7 @@ export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
                         className={`imageSlide rounded-lg`}
                         style={{ 
                             width: `${imageSize}%`,
-                            height: `${screenWidth <= 1024? `30vh` : '50vh'}`,
+                            height: `${imageHeight()}`,
                             backgroundImage: `url('${item}')`,
                             backgroundSize: '100% 100%',
                             backgroundRepeat: 'no-repeat',
@@ -96,7 +98,7 @@ export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
 };
   
   ImageCarousel.propTypes = {
-    screenWidth: PropTypes.string,
+    screenWidth: PropTypes.number,
     projectName: PropTypes.string.isRequired,
     imageSize: PropTypes.number,
   };

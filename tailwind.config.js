@@ -4,12 +4,12 @@ export const darkMode =["class"];
 export const theme = {
     extend: {
         screens: {
-            sm: "640px",
-            md: "768px",
-            lg: "1024px",
-            xl: "1280px",
-            "2xl": "1536px",
-        },
+            'tablet': '640px',
+      
+            'laptop': '1024px',
+      
+            'desktop': '1280px',
+          },
         colors: {
             dark: '#292929',
             light: '#dfdfdf'
