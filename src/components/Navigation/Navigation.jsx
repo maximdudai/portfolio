@@ -34,13 +34,15 @@ const Navigation = ({ selectedComponent }) => {
     const handleSetActiveComponent = (component) => {
         if(activeComponent === component) return;
 
+        if(showMobileMenu)
+            handleButtonMobileMenu();
+
         setActiveComponent(component);
         selectedComponent(component);
 
         if (!isPlaying) {
             clickSound.play();
         }
-            
 
         setIsPlaying(false);
 
@@ -48,7 +50,6 @@ const Navigation = ({ selectedComponent }) => {
 
     const toggleTheme = () => {
         handleAppTheme(!defaultTheme);
-        console.log(defaultTheme);
     };
 
     useEffect(() => {
@@ -76,7 +77,7 @@ const Navigation = ({ selectedComponent }) => {
 
             <div className="navigationContainer w-full h-full flex items-center justify-between lg:justify-normal lg:flex-col">
                     
-                <div className="navLogo w-20 lg:w-2/3 md:bg-black/90 md:rounded-full md:p-4 md:dark:p-0 dark:bg-transparent">
+                <div className="navLogo w-20 lg:w-2/3 bg-slate-600 p-2 rounded-full md:p-4 md:dark:p-0 dark:bg-transparent">
                     <img 
                         src={MaxDev} 
                         alt="Portfolio Logo"
@@ -90,7 +91,7 @@ const Navigation = ({ selectedComponent }) => {
                             <div className="mobileMenuToggleButton">
                                 <button 
                                     onClick={handleButtonMobileMenu}
-                                    className='text-2xl text-gray-200'
+                                    className='text-2xl dark:text-gray-200'
                                 >
 
                                     <RiMenuFoldLine />
@@ -100,7 +101,7 @@ const Navigation = ({ selectedComponent }) => {
                             <div className="mobileMenuContent">
                                 {
                                     showMobileMenu &&
-                                    <MobileMenu toggleMobileMenu={handleButtonMobileMenu} />
+                                    <MobileMenu activePage={handleSetActiveComponent} toggleMobileMenu={handleButtonMobileMenu} />
                                 }
                             </div>
                         </div>
@@ -136,6 +137,13 @@ const Navigation = ({ selectedComponent }) => {
                                         Resume
                                     </button>
                                 </div>
+                                {/* <div className={`desktopNavigationLinkContact w-[105%] h-12 ${activeComponent === 'Contact' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Contact' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('Contact')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
+                                        Contact
+                                    </button>
+                                </div> */}
                             </div>
 
                             <div className="desktopNavigationSocialContainer w-full relative top-0 text-2xl m-5 flex justify-around items-center">
@@ -164,6 +172,6 @@ const Navigation = ({ selectedComponent }) => {
 };
 export default Navigation;
 
-Navigation.propTypes = { 
-    selectedProject: PropTypes.number
+Navigation.propType = {
+    selectedComponent: PropTypes.number
 };

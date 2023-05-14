@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import PropTypes from 'prop-types';
+
 import { RiMenuUnfoldLine } from 'react-icons/ri';
 
 import MaxDev from '../../../../assets/maxdev-logo.png';
@@ -9,15 +12,23 @@ import { Github } from '../../../Links/Github';
 import { Linkedin } from '../../../Links/Linkedin';
 import { Twitter } from '../../../Links/Twitter';
 
-const MobileMenu = ({ toggleMobileMenu }) => {
+import { AppTheme } from '../../../../context/WebTheme/AppTheme';
+
+
+import LightTheme from '../../assets/light-mode.png';
+import DarkTheme from '../../assets/dark-mode.png';
+
+const MobileMenu = ({ activePage, toggleMobileMenu }) => {
+    const { defaultTheme, handleAppTheme } = useContext(AppTheme);
+
     return (
         <>
-            <div className="mobileMenu fixed overflow-hidden inset-0 w-screen h-screen bg-gray-200 dark:bg-slate-800">
+            <div className="mobileMenu fixed z-30 overflow-hidden inset-0 w-screen h-screen bg-gray-200 dark:bg-slate-800">
                 <div className="mobileMenuNavbarContent w-full flex justify-between items-center p-2 px-3">
                     
                     <div className="mobileMenuCloseModal">
                         <button
-                            className='text-2xl text-gray-900 dark:text-gray-200'
+                            className='text-2xl'
                             onClick={toggleMobileMenu}
                         >
                             <RiMenuUnfoldLine />
@@ -26,12 +37,21 @@ const MobileMenu = ({ toggleMobileMenu }) => {
 
                     <div className="mobileMenuLogo rounded-full bg-slate-600 dark:bg-transparent">
                         <img 
-                            className='w-20'
+                            className='w-20 p-2 dark:p-0'
                             src={MaxDev}
                             alt={'Portfolio Logo'}
                         />
                     </div>
 
+                </div>
+
+                <div className="mobileMenuToggleTheme">
+                    <img 
+                        className='w-10 absolute z-10 left-0 top-32 rotate-[90deg]'
+                        onClick={handleAppTheme}
+                        src={defaultTheme === 'dark'? LightTheme : DarkTheme}
+                        alt="Theme Switcher"  
+                    />
                 </div>
 
                 <div className="mobileMenuContainer p-4 w-full h-full flex flex-col justify-evenly">
@@ -73,6 +93,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
 
                         <div className="mobileMenuPageAboutMe w-full flex justify-center">
                             <button
+                                onClick={() => activePage('AboutMe')}
                                 className='flex w-full justify-between items-center py-2'
                             >
                                 <span className='w-auto font-semibold text-left'>About Me</span>
@@ -82,6 +103,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                         </div>
                         <div className="mobileMenuPageProjects w-full flex justify-center">
                             <button
+                                onClick={() => activePage('Projects')}
                                 className='flex w-full justify-between items-center py-2'
                             >
                                 <span className='w-auto font-semibold text-left'>Projects</span>
@@ -90,6 +112,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                         </div>
                         <div className="mobileMenuPageSkills w-full flex justify-center">
                             <button
+                                onClick={() => activePage('Skills')}
                                 className='flex w-full justify-between items-center py-2'
                             >
                                 <span className='w-auto font-semibold text-left'>Skills</span>
@@ -98,6 +121,7 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                         </div>
                         <div className="mobileMenuPageResume w-full flex justify-center">
                             <button
+                                onClick={() => activePage('Resume')}
                                 className='flex w-full justify-between items-center py-2'
                             >
                                 <span className='w-auto font-semibold text-left'>Resume</span>
@@ -106,13 +130,13 @@ const MobileMenu = ({ toggleMobileMenu }) => {
                         </div>
                     </div>
 
-                    <div className="mobileMenuContactMe mb-5 w-full flex justify-center">
+                    {/* <div className="mobileMenuContactMe mb-5 w-full flex justify-center">
                         <button
                             className='font-semibold tracking-widest border-[1px] w-full p-2 rounded-lg bg-slate-600 dark:bg-transparent text-gray-200'    
                         >
                             Contact Me!
                         </button>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>
@@ -120,3 +144,8 @@ const MobileMenu = ({ toggleMobileMenu }) => {
     )
 };
 export default MobileMenu;
+
+MobileMenu.propTypes = {
+    activePage: PropTypes.func.isRequired,
+    toggleMobileMenu: PropTypes.func.isRequired
+}
