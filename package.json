@@ -15,7 +15,6 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "@trendyol-js/react-carousel": "^3.0.2",
-    "gh-pages": "^5.0.0",
     "install": "^0.13.0",
     "npm": "^9.6.6",
     "react": "^18.2.0",
