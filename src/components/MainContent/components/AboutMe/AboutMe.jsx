@@ -8,6 +8,8 @@ import { Twitch } from '../../../Links/Twitch';
 import { Instagram } from '../../../Links/Instagram';
 import { Discord } from '../../../Links/Discord';
 
+import { SoftSkills } from './SoftSkills';
+
 const AboutMe = () => {
 
     const elementBorderStyle = 'border-l-[1px] border-orange-400 p-2';
@@ -16,7 +18,7 @@ const AboutMe = () => {
 
     return (
         <>
-            <div className="personalPortfolioAboutMe h-full lg:h-auto lg:w-1/2">
+            <div className="personalPortfolioAboutMe h-full lg:h-auto xl:w-1/2">
                 <div className="aboutMeComponentContainer">
                     <div className={`boutMeComponentDescription ${backgroundElementStyle} mt-5`}>
                         <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
@@ -35,12 +37,12 @@ const AboutMe = () => {
                             <span className="text-gray-400 text-md lg:text-sm">Social Media</span>
                             <span>
                                 <ul className='flex items-center gap-2 mt-2'>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Linkedin /> </li>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Github /> </li>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Twitter /> </li>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Twitch /> </li>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Instagram /> </li>
-                                    <li className='p-2 bg-white/5 rounded-lg'><Discord /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Linkedin /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Github /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Twitter /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Twitch /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Instagram /> </li>
+                                    <li className='p-2 bg-black/20 dark:bg-white/5 rounded-lg'><Discord /> </li>
                                 </ul>
                             </span>
                         </div>
@@ -83,12 +85,11 @@ const AboutMe = () => {
                             <span className="text-gray-400 text-md lg:text-sm">Networking skills</span>
                             <span>
                                 <ul>
-                                    <li>&gt; Adaptability</li>
-                                    <li>&gt; Communication</li>
-                                    <li>&gt; Collaboration</li>
-                                    <li>&gt; Patience</li>
-                                    <li>&gt; Problem-solving</li>
-                                    <li>&gt; Continuous learning</li>
+                                    {SoftSkills.map((skill, index) => (
+                                        <li key={index}>
+                                            &gt; {skill}
+                                        </li>
+                                    ))}
                                 </ul>
                             </span>
                         </div>
@@ -104,7 +105,7 @@ const AboutMe = () => {
                                     <li>&gt; Video Games <span className="text-gray-400 text-[10px]">GTA V, CS:GO, PUBG</span></li>
                                     <li>&gt; Tech Industry <span className="text-gray-400 text-[10px]">Software Development</span></li>
                                     <li>&gt; New Technologies <span className="text-gray-400 text-[10px]">Gadgets, Consoles</span></li>
-                                    <li >&gt; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Ping Pong, Badminton</span></li>
+                                    <li >&gt; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Basketball, Ping Pong</span></li>
                                 </ul>
                             </span>
                         </div>

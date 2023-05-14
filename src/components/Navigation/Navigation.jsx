@@ -65,10 +65,10 @@ const Navigation = ({ selectedComponent }) => {
     return (
         <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 lg:border-none">
             
-            <div className="changeAppDarkTheme">
+            <div className="changeAppDarkTheme hidden md:inline">
                 <img 
                     onClick={toggleTheme}
-                    className='fixed cursor-crosshair z-10 top-0 left-1 w-9 rotate-[180deg]'
+                    className='absolute cursor-crosshair z-10 top-0 left-1 w-9 rotate-[180deg]'
                     src={defaultTheme === 'light' ? DarkTheme : LightTheme}
                     alt="App Theme" 
                 />
