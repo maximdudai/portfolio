@@ -69,10 +69,10 @@ export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
       return null;
     }
 
-    const imageHeight = () => (screenWidth <= 1280? `30vh` : screenWidth <= 1024? `20vh` : `50vh`);
+    const imageHeight = () => (screenWidth <= 1280? `40vh` : screenWidth <= 1024? `20vh` : `50vh`);
 
     return (
-        <div className="imageCarousel w-full lg:w-[85%] flex justify-center items-center">
+        <div className="imageCarousel w-full xl:w-[85%] flex justify-center items-center">
             <Carousel
                 className='w-full flex flex-col justify-center items-center'
                 NextIcon={<GrFormNext className='bg-gray-400/50 rounded-full' />}

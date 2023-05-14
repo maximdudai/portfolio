@@ -60,7 +60,7 @@ const Navigation = ({ selectedComponent }) => {
     const activeComponentStyle = 'border-r-[1px] border-gray-900 dark:border-gray-200';
 
     return (
-        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 md:border-none">
+        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 lg:border-none">
 
             <div className="navigationContainer w-full h-full flex items-center justify-between lg:justify-normal lg:flex-col">
                     

@@ -26,7 +26,7 @@ const ProjectMobile = ({screenWidth, selectedProject, onModalClose}) => {
 
                 <ProjectTitle selectedProject={selectedProject} />
 
-                <div className="mobileSelectedProjectImage w-full">
+                <div className="mobileSelectedProjectImage w-full lg:w-1/2">
                     <ImageCarousel screenWidth={screenWidth} projectName={personalProjects[selectedProject]?.projectName.split(' ').join('').toLowerCase()} imageSize={100} />
                 </div>
                 
