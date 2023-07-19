@@ -64,7 +64,7 @@ const Navigation = ({ selectedComponent }) => {
     const activeComponentStyle = 'border-r-[1px] border-gray-900 dark:border-gray-200';
 
     return (
-        <nav className="w-full p-2 h-auto bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 lg:border-none">
+        <nav className="w-full p-2 h-full bg-black/[.05] border-b-[1px] border-slate-400 flex md:flex-col lg:w-2/6 lg:h-screen xl:w-1/6 lg:border-none">
             
             <div className="changeAppDarkTheme hidden md:inline">
                 <img 
@@ -170,8 +170,8 @@ const Navigation = ({ selectedComponent }) => {
         </nav>
     )
 };
-export default Navigation;
 
-Navigation.propType = {
-    selectedComponent: PropTypes.number
+Navigation.propTypes = {
+    selectedComponent: PropTypes.number.isRequired
 };
+export default Navigation;

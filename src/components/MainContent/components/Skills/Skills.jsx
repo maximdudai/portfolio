@@ -41,7 +41,7 @@ const Skills = () => {
 
     return (
         <>
-            <div className="portoflioSkills w-full h-screen md:h-screen lg:h-full flex flex-col lg:justify-evenly">
+            <div className="portoflioSkills w-full min-h-screen md:h-full lg:h-full flex flex-col lg:justify-evenly">
 
                 <div className="portfolioSkillset w-full h-auto xl:h-96 flex flex-col justify-center items-center xl:w-1/3 p-3 bg-black/20 dark:bg-white/10 rounded">
                     <div className="portoflioSkillsTitle w-[95%] flex justify-between items-center bg-dark/25 dark:bg-white/5 p-2 my-4 border-2 border-gray-400/10 rounded-md">
