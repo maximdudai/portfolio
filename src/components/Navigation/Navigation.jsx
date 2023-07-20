@@ -32,7 +32,7 @@ const Navigation = ({ selectedComponent }) => {
     };
 
     const handleSetActiveComponent = (component) => {
-        if(activeComponent === component) return;
+        // if(activeComponent === component) return;
 
         if(showMobileMenu)
             handleButtonMobileMenu();

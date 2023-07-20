@@ -8,7 +8,6 @@ const Resume = lazy(() => import('./components/Resume/Resume'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
 
 const MainContent = ({ showingPage }) => {
-
     return (
         <>
             <div className="portfolioContainer p-5 w-full h-auto lg:h-screen text-gray-900 dark:text-gray-200">
