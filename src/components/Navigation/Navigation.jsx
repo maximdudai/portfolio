@@ -172,6 +172,6 @@ const Navigation = ({ selectedComponent }) => {
 };
 
 Navigation.propTypes = {
-    selectedComponent: PropTypes.number.isRequired
+    selectedComponent: PropTypes.string
 };
 export default Navigation;

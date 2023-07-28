@@ -8,6 +8,7 @@ function App() {
     const [showingComponent, setShowingComponent] = useState('AboutMe');
 
     const handleShowingComponent = (comp) => {
+        console.log(comp);
         setShowingComponent(comp);
     };
 
