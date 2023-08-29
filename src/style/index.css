@@ -1,9 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300&display=swap");
-
-html, body, #root {
-  height: 100%;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -12,5 +7,5 @@ body {
      -moz-user-select: none;
           user-select: none;
   font-family: "JetBrains Mono", sans-serif;
-  overflow: hidden;
+  overflow: auto;
 }/*# sourceMappingURL=index.css.map */

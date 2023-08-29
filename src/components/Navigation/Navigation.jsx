@@ -41,6 +41,7 @@ const Navigation = ({ selectedComponent }) => {
         selectedComponent(component);
 
         if (!isPlaying) {
+            clickSound.volume = 0.05;
             clickSound.play();
         }
 
@@ -172,6 +173,6 @@ const Navigation = ({ selectedComponent }) => {
 };
 
 Navigation.propTypes = {
-    selectedComponent: PropTypes.string
+    selectedComponent: PropTypes.func
 };
 export default Navigation;
