@@ -10,6 +10,7 @@ import phpLogo from './images/php.png';
 import mysqlLogo from './images/mysql.png';
 import axiosLogo from './images/axios.png';
 import restapiLogo from './images/restapi.png';
+import tsLogo from './images/typescript.png';
 
 export const stackLogo = {
     html: htmlLogo,
@@ -19,6 +20,7 @@ export const stackLogo = {
     tailwindcss: tailwindLogo,
     javascript: jsLogo,
     react: reactLogo,
+    typescript: tsLogo,
     vitejs: viteLogo,
     php: phpLogo,
     mysql: mysqlLogo,
