@@ -138,6 +138,13 @@ const Navigation = ({ selectedComponent }) => {
                                         Resume
                                     </button>
                                 </div>
+                                <div className={`desktopNavigationLinkResume mt-10 w-[105%] h-12 ${activeComponent === 'Contact' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Contact' ? activeComponentStyle : ''}`}>
+                                    <button 
+                                        onClick={() => handleSetActiveComponent('Contact')}
+                                        className='text-md w-full h-full p-2 tracking-widest'>
+                                        Say Hello!
+                                    </button>
+                                </div>
                                 {/* <div className={`desktopNavigationLinkContact w-[105%] h-12 ${activeComponent === 'Contact' ? 'text-gray-600 dark:text-white' : 'text-gray-400'} font-semibold focus:outline-none dark:hover:text-white hover:border-r-[1px] border-orange-400 ${activeComponent === 'Contact' ? activeComponentStyle : ''}`}>
                                     <button 
                                         onClick={() => handleSetActiveComponent('Contact')}

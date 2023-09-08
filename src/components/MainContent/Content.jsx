@@ -6,6 +6,7 @@ const AboutMe = lazy(() => import('./components/AboutMe/AboutMe'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
 const Resume = lazy(() => import('./components/Resume/Resume'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
 
 const MainContent = ({ showingPage }) => {
     return (
@@ -16,6 +17,7 @@ const MainContent = ({ showingPage }) => {
                     { showingPage === 'Projects' && <Projects /> }
                     { showingPage === 'Resume' && <Resume /> }
                     { showingPage === 'Skills' && <Skills /> }
+                    { showingPage === 'Contact' && <Contact /> }
                 </Suspense>
             </div>
         </>
