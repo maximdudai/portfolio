@@ -89,7 +89,7 @@ const Projects = () => {
                                         
                                         <div className="projectDetails w-full gap-2 flex justify-center items-center">
                                             
-                                            <div className="projectDataInformations flex flex-col">
+                                            <div className="projectDataInformations flex flex-col min-h-content">
                                                 <Description selectedProject={selectedProject} />
 
                                                 <Stack selectedProject={selectedProject}/>
