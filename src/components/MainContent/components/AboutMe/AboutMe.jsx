@@ -87,7 +87,7 @@ const AboutMe = () => {
                                 <ul>
                                     {SoftSkills.map((skill, index) => (
                                         <li key={index}>
-                                            &gt; {skill}
+                                            &middot; {skill}
                                         </li>
                                     ))}
                                 </ul>
@@ -102,10 +102,10 @@ const AboutMe = () => {
                             <span className="text-gray-400 text-md lg:text-sm">Interests</span>
                             <span>
                                 <ul>
-                                    <li>&gt; Video Games <span className="text-gray-400 text-[10px]">GTA V, CS:GO, PUBG</span></li>
-                                    <li>&gt; Tech Industry <span className="text-gray-400 text-[10px]">Software Development</span></li>
-                                    <li>&gt; New Technologies <span className="text-gray-400 text-[10px]">Gadgets, Consoles</span></li>
-                                    <li >&gt; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Basketball, Ping Pong</span></li>
+                                    <li>&middot; Video Games <span className="text-gray-400 text-[10px]">GTA V, CS:GO, PUBG</span></li>
+                                    <li>&middot; Tech Industry <span className="text-gray-400 text-[10px]">Software Development</span></li>
+                                    <li>&middot; New Technologies <span className="text-gray-400 text-[10px]">Gadgets, Consoles</span></li>
+                                    <li >&middot; Sports <span className="text-gray-400 text-[10px]">Football, Volleyball, Basketball, Ping Pong</span></li>
                                 </ul>
                             </span>
                         </div>

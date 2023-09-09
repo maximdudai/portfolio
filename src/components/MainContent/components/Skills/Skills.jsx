@@ -98,7 +98,7 @@ const Skills = () => {
                   className="rounded text-gray-200 p-2 gap-2 my-1 bg-black/25 dark:bg-black/50 text-sm lg:text-md"
                   key={index}
                 >
-                  &gt; {skill}
+                  &middot; {skill}
                 </li>
               ))}
           </ul>
