@@ -75,7 +75,7 @@ const Projects = () => {
                             />
                         ):
                         <div className="projectContainerSelected hidden lg:flex justify-center p-5 w-full">
-                            <div className="selectedProject bg-white/50 dark:bg-dark w-auto xl:min-h-[40rem] flex justify-center items-center">
+                            <div className="selectedProject bg-white/50 dark:bg-dark w-full xl:min-h-[40rem] flex justify-center items-center">
                                 {
                                     selectedProject !== null? (
                                     <div className="selectedProjectDesktop w-full flex flex-col justify-center items-center">

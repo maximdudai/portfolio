@@ -19,7 +19,7 @@ export const personalProjects = [
     {
         imageURL: bookShop,
         projectName: "eBook Shop",
-        description: "eBookShop provides users with easy access to a wide selection of books and a user-friendly shopping experience. Users can create an account, browse books, and make purchases using any device. Advanced search filters help users find specific books quickly. The website administrator has full control over user management and site maintenance.",
+        description: "eBookShop offers easy access to a wide range of books. Users can create accounts, browse, and buy books from any device. Advanced search filters make finding books easy, and the admin has full control over the site.",
         githubURL: "https://github.com/maximdudai/eBooks-Shop",
         liveVersion: "",
         stack: [
