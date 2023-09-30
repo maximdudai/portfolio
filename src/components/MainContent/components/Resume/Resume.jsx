@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-import personalResume from "./resume/maximdudai-cv.pdf";
+import personalResume from "./resume/maximdudaicv.pdf";
 import { FaFileDownload } from "react-icons/fa";
 
 const Resume = () => {
@@ -17,7 +17,7 @@ const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = personalResume;
-    link.download = "maximdudai-cv.pdf"; // Set the desired file name here
+    link.download = "maximdudaicv.pdf"; // Set the desired file name here
 
     link.dispatchEvent(new MouseEvent("click"));
   };
