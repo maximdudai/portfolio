@@ -1,7 +1,9 @@
 import { useState } from 'react';
+
 import './App.css'
 import MainContent from './components/MainContent/Content';
 import Navigation from './components/Navigation/Navigation'
+
 
 
 function App() {
