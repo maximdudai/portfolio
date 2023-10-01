@@ -23,7 +23,7 @@ const emailPreview = ({ from, email, content }) => {
       </p>
 
       <p className="flex flex-col my-2">
-        <span className="text-sm text-gray-400">Subject</span>
+        <span className="text-sm text-gray-400">Message</span>
         <span>{content}</span>
       </p>
 
