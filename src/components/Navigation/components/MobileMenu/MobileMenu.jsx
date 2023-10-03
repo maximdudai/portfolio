@@ -128,6 +128,15 @@ const MobileMenu = ({ activePage, toggleMobileMenu }) => {
                                 <span><BiDotsHorizontalRounded /></span>
                             </button>
                         </div>
+                        <div className="mobileMenuPageResume w-full flex justify-center">
+                            <button
+                                onClick={() => activePage('Contact')}
+                                className='flex w-full justify-between items-center py-2'
+                            >
+                                <span className='w-auto font-semibold text-left'>Say Hello!</span>
+                                <span><BiDotsHorizontalRounded /></span>
+                            </button>
+                        </div>
                     </div>
 
                     {/* <div className="mobileMenuContactMe mb-5 w-full flex justify-center">
