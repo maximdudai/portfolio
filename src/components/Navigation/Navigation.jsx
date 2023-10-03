@@ -31,6 +31,7 @@ const Navigation = ({ selectedComponent }) => {
         handleMobileMenu(!showMobileMenu);
     };
 
+    // Toggle mobile menu component
     const handleSetActiveComponent = (component) => {
         // if(activeComponent === component) return;
 
