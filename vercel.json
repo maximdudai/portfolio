@@ -1,0 +1,9 @@
+{
+  "redirects": [
+      { "source": "/github", "destination": "https://github.com/maximdudai" },
+      { "source": "/gh", "destination": "https://github.com/maximdudai" },
+
+      { "source": "/linkedin", "destination": "https://www.linkedin.com/in/maxd-dev/" },
+      { "source": "/in", "destination": "https://www.linkedin.com/in/maxd-dev/" }
+  ]
+}

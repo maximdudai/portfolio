@@ -29,7 +29,6 @@ const Navigation = ({ selectedComponent }) => {
     handleMobileMenu(!showMobileMenu);
   };
 
-  // Toggle mobile menu component
   const handleSetActiveComponent = (component) => {
     // if(activeComponent === component) return;
 
@@ -45,6 +44,7 @@ const Navigation = ({ selectedComponent }) => {
 
     setIsPlaying(false);
   };
+
 
   const toggleTheme = () => {
     handleAppTheme(!defaultTheme);
