@@ -1,4 +1,4 @@
-﻿# [Portfolio](https://max-dev.netlify.app/)
+﻿# [Portfolio](https://maxdev.live)
 
 ### 💻 Tech Stack
 
