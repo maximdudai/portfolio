@@ -12,6 +12,28 @@ import axiosLogo from './images/axios.png';
 import restapiLogo from './images/restapi.png';
 import tsLogo from './images/typescript.png';
 
+export const frontendStack = {
+    html: htmlLogo,
+    css: cssLogo,
+    bootstrap: bootstrapLogo,
+    sass: sassLogo,
+    tailwindcss: tailwindLogo,
+    javascript: jsLogo,
+    react: reactLogo,
+    typescript: tsLogo,
+    vitejs: viteLogo,
+};
+
+export const backendStack = {
+    php: phpLogo,
+    typescript: tsLogo,
+    axios: axiosLogo,
+};
+
+export const otherStack = {
+
+}
+
 export const stackLogo = {
     html: htmlLogo,
     css: cssLogo,

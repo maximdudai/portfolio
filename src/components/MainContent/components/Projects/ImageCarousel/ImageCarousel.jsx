@@ -27,6 +27,12 @@ import currencyImage2 from '../assets/project-image/CurrencyConvert/CurrencyConv
 import githubImage1 from '../assets/project-image/GithubSearch/GitHubProject-1.png';
 import githubImage2 from '../assets/project-image/GithubSearch/GitHubProject-2.png';
 
+import petcareImage1 from '../assets/project-image/petCare/showcase1.png';
+import petcareImage2 from '../assets/project-image/petCare/showcase2.png';
+import petcareImage3 from '../assets/project-image/petCare/showcase3.png';
+import petcareImage4 from '../assets/project-image/petCare/showcase4.png';
+import petcareImage5 from '../assets/project-image/petCare/showcase5.png';
+
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 
 
@@ -59,7 +65,14 @@ const imagesPath = {
   githubsearch: [
     githubImage1,
     githubImage2,
-  ]
+  ],
+  petcare: [
+    petcareImage1,
+    petcareImage2,
+    petcareImage3,
+    petcareImage4,
+    petcareImage5,
+  ],
 };
 
 export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {

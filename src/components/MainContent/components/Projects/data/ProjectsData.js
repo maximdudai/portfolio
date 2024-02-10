@@ -2,8 +2,23 @@ import mandachiProject from '../assets/mandachi-project.png';
 import bookShop from '../assets/bookShop-project.png';
 import githubSearch from '../assets/githubSearch.png';
 import currencyConvert from '../assets/moneyConverter.png';
+import petcareProject from '../assets/project-image/petCare/showcase1.png';
 
 export const personalProjects = [
+    {
+        imageURL: petcareProject,
+        projectName: "PetCare",
+        description: "Web APP allows users to easily browse and adopt pets from various shelters. Users can browse, and adopt pets from any device. Advanced search filters make finding pets easy.",
+        githubURL: "https://github.com/maximdudai/pwc_project",
+        liveVersion: "https://maximdudai.github.io/pwc_project/",
+        stack: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap",
+            "RESTAPI",
+        ]
+    },
     {
         imageURL: mandachiProject,
         projectName: "Mandachi Hotel",

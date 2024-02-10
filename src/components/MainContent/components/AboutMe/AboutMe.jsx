@@ -22,7 +22,7 @@ const AboutMe = () => {
                 <div className="aboutMeComponentContainer">
                     <div className={`boutMeComponentDescription ${backgroundElementStyle} mt-5`}>
                         <p className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-md lg:text-sm">Description</span>
+                            <span className="text-gray-400 text-md lg:text-sm">About Me</span>
                             <span>
                                 Hi, I&#39;m Maxim, a dedicated and detail-oriented Front-End Web Developer with a passion for creating user-friendly and visually appealing web solutions. 
                                 I am constantly looking to enhance my skills and knowledge to keep pace with the latest trends and best practices in the industry.
@@ -82,7 +82,7 @@ const AboutMe = () => {
                 <div className="personalSkillsContainer mt-5">
                     <div className={`personalSkillsComponentDescription ${backgroundElementStyle} mt-5`}>
                         <div className={`text-md lg:text-sm ${elementBorderStyle} flex flex-col`}>
-                            <span className="text-gray-400 text-md lg:text-sm">Networking skills</span>
+                            <span className="text-gray-400 text-md lg:text-sm">Soft skills</span>
                             <span>
                                 <ul>
                                     {SoftSkills.map((skill, index) => (
