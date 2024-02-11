@@ -1,7 +1,11 @@
 import { MdLineStyle, MdSettingsEthernet } from "react-icons/md";
 import { BsTools } from "react-icons/bs";
 
-import { frontendStack, backendStack, toolsStack } from "../Projects/stack/StackData";
+import {
+  frontendStack,
+  backendStack,
+  toolsStack,
+} from "../Projects/stack/StackData";
 const frontendStackArray = Object.entries(frontendStack);
 const backendStackArray = Object.entries(backendStack);
 const toolsStackArray = Object.entries(toolsStack);
@@ -21,22 +25,28 @@ const Skills = () => {
           </div>
           <div className="skillsContainerContent">
             <ul className="frontendList w-full">
-            {
-              frontendStackArray.map( ([tool, url]) => {
+              {frontendStackArray.map(([tool, url]) => {
                 return (
-                  <li key={tool} className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1">
+                  <li
+                    key={tool}
+                    className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1"
+                  >
                     <div className="stackLogo bg-black/10 dark:bg-white/10 rounded">
                       <img src={url} alt={tool} className="w-16 p-2" />
                     </div>
                     <div className="stackName">
-                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">{tool}</p>
+                      <p
+                        className={`p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded 
+                        ${tool === "css" ? "w-5" : ""}
+                        `}
+                      >
+                        {tool}
+                      </p>
                     </div>
                   </li>
-                )
-              })
-            }
+                );
+              })}
             </ul>
-
           </div>
         </div>
 
@@ -51,20 +61,23 @@ const Skills = () => {
           </div>
           <div className="skillsContainerContent">
             <ul className="frontendList w-full">
-            {
-              backendStackArray.map( ([tool, url]) => {
+              {backendStackArray.map(([tool, url]) => {
                 return (
-                  <li key={tool} className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1">
+                  <li
+                    key={tool}
+                    className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1"
+                  >
                     <div className="stackLogo bg-black/10 dark:bg-white/10 rounded">
                       <img src={url} alt={tool} className="w-16 p-2" />
                     </div>
                     <div className="stackName">
-                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">{tool}</p>
+                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
+                        {tool}
+                      </p>
                     </div>
                   </li>
-                )
-              })
-            }
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -80,20 +93,29 @@ const Skills = () => {
           </div>
           <div className="skillsContainerContent">
             <ul className="frontendList w-full">
-            {
-              toolsStackArray.map( ([tool, url]) => {
+              {toolsStackArray.map(([tool, url]) => {
                 return (
-                  <li key={tool} className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1">
+                  <li
+                    key={tool}
+                    className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1"
+                  >
                     <div className="stackLogo bg-black/10 dark:bg-white/10 rounded">
-                      <img src={url} alt={tool} className={`w-16 p-2 ${tool === 'git' || tool === 'figma' ? 'h-[3.5rem]' : ''}`} />
+                      <img
+                        src={url}
+                        alt={tool}
+                        className={`w-16 p-2 
+                          ${tool === "git" || tool === "figma" ? "h-[3.5rem]" : ""}
+                        `}
+                      />
                     </div>
                     <div className="stackName">
-                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">{tool}</p>
+                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
+                        {tool === "microsoft_project" ? "microsoft project" : tool}
+                      </p>
                     </div>
                   </li>
-                )
-              })
-            }
+                );
+              })}
             </ul>
           </div>
         </div>

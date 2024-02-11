@@ -12,6 +12,22 @@ import axiosLogo from './images/axios.png';
 import restapiLogo from './images/restapi.png';
 import tsLogo from './images/typescript.png';
 
+export const stackLogo = {
+    html: htmlLogo,
+    css: cssLogo,
+    bootstrap: bootstrapLogo,
+    sass: sassLogo,
+    tailwindcss: tailwindLogo,
+    js: jsLogo,
+    react: reactLogo,
+    ts: tsLogo,
+    vitejs: viteLogo,
+    php: phpLogo,
+    mysql: mysqlLogo,
+    axios: axiosLogo,
+    restapi: restapiLogo,
+}
+
 export const frontendStack = {
     html: htmlLogo,
     css: cssLogo,
@@ -37,4 +53,5 @@ export const toolsStack = {
     git: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
     figma: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
     netlify: 'https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png',
+    microsoft_project: 'https://upload.wikimedia.org/wikipedia/commons/1/10/MS_Project_Logo.png',
 }
