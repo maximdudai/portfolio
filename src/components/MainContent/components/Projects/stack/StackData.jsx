@@ -26,26 +26,15 @@ export const frontendStack = {
 
 export const backendStack = {
     php: phpLogo,
-    typescript: tsLogo,
     axios: axiosLogo,
-};
-
-export const otherStack = {
-
-}
-
-export const stackLogo = {
-    html: htmlLogo,
-    css: cssLogo,
-    bootstrap: bootstrapLogo,
-    sass: sassLogo,
-    tailwindcss: tailwindLogo,
-    javascript: jsLogo,
-    react: reactLogo,
-    typescript: tsLogo,
-    vitejs: viteLogo,
-    php: phpLogo,
+    restapi: restapiLogo,
     mysql: mysqlLogo,
-    axios: axiosLogo,
-    restapi: restapiLogo
 };
+
+export const toolsStack = {
+    vscode: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg',
+    github: 'https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg',
+    git: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
+    figma: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
+    netlify: 'https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png',
+}
