@@ -53,5 +53,8 @@ export const toolsStack = {
     git: 'https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg',
     figma: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
     netlify: 'https://cdn.freebiesupply.com/logos/large/2x/netlify-logo-png-transparent.png',
+    vercel: 'https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png',
     microsoft_project: 'https://upload.wikimedia.org/wikipedia/commons/1/10/MS_Project_Logo.png',
+    xampp: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/XAMPP_Logo.png',
+    postman: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png'
 }

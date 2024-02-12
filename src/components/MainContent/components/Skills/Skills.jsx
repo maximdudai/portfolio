@@ -6,11 +6,22 @@ import {
   backendStack,
   toolsStack,
 } from "../Projects/stack/StackData";
+import { useState } from "react";
 const frontendStackArray = Object.entries(frontendStack);
 const backendStackArray = Object.entries(backendStack);
 const toolsStackArray = Object.entries(toolsStack);
 
 const Skills = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <>
       <div className="portfolioSkills w-full lg:flex lg:flex-row gap-2">
@@ -29,7 +40,12 @@ const Skills = () => {
                 return (
                   <li
                     key={tool}
-                    className="w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1"
+                    onMouseEnter={tool === 'typescript' ? handleMouseEnter : null}
+                    onMouseLeave={tool === 'typescript' ? handleMouseLeave : null}
+                    className={`w-full flex items-center justify-between border-[1px] border-white/10 shadow-lg rounded my-1 ${
+                      tool === "typescript" && isHovered ? "animate-pulse" : ""
+                    }`}
+                    title={`${tool === "typescript" ? "Learning.." : ""}`}
                   >
                     <div className="stackLogo bg-black/10 dark:bg-white/10 rounded">
                       <img src={url} alt={tool} className="w-16 p-2" />
@@ -40,7 +56,9 @@ const Skills = () => {
                         ${tool === "css" ? "w-5" : ""}
                         `}
                       >
-                        {tool}
+                        {tool === "typescript" && isHovered
+                          ? "learning.."
+                          : tool}
                       </p>
                     </div>
                   </li>
@@ -60,7 +78,7 @@ const Skills = () => {
             </span>
           </div>
           <div className="skillsContainerContent">
-            <ul className="frontendList w-full">
+            <ul className="backendList w-full">
               {backendStackArray.map(([tool, url]) => {
                 return (
                   <li
@@ -92,7 +110,7 @@ const Skills = () => {
             </span>
           </div>
           <div className="skillsContainerContent">
-            <ul className="frontendList w-full">
+            <ul className="toolsList w-full">
               {toolsStackArray.map(([tool, url]) => {
                 return (
                   <li
@@ -104,13 +122,19 @@ const Skills = () => {
                         src={url}
                         alt={tool}
                         className={`w-16 p-2 
-                          ${tool === "git" || tool === "figma" ? "h-[3.5rem]" : ""}
+                          ${
+                            tool === "git" || tool === "figma"
+                              ? "h-[3.95rem]"
+                              : ""
+                          }
                         `}
                       />
                     </div>
                     <div className="stackName">
                       <p className="p-3 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
-                        {tool === "microsoft_project" ? "microsoft project" : tool}
+                        {tool === "microsoft_project"
+                          ? "microsoft project"
+                          : tool}
                       </p>
                     </div>
                   </li>
