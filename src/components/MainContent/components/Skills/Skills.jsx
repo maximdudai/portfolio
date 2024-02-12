@@ -36,7 +36,7 @@ const Skills = () => {
                     </div>
                     <div className="stackName">
                       <p
-                        className={`p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded 
+                        className={`p-3 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded 
                         ${tool === "css" ? "w-5" : ""}
                         `}
                       >
@@ -71,7 +71,7 @@ const Skills = () => {
                       <img src={url} alt={tool} className="w-16 p-2" />
                     </div>
                     <div className="stackName">
-                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
+                      <p className="p-3 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
                         {tool}
                       </p>
                     </div>
@@ -109,7 +109,7 @@ const Skills = () => {
                       />
                     </div>
                     <div className="stackName">
-                      <p className="p-4 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
+                      <p className="p-3 text-black dark:text-white/90 uppercase bg-black/10 dark:bg-white/10 mr-1 rounded">
                         {tool === "microsoft_project" ? "microsoft project" : tool}
                       </p>
                     </div>

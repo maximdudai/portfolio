@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=9872'), auto;
+}
+
 /* Default styles */
 .theme-ligth {
     color: theme('colors.dark');
