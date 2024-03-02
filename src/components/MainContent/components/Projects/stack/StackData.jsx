@@ -18,7 +18,7 @@ export const stackLogo = {
     bootstrap: bootstrapLogo,
     sass: sassLogo,
     tailwindcss: tailwindLogo,
-    js: jsLogo,
+    javascript: jsLogo,
     react: reactLogo,
     ts: tsLogo,
     vitejs: viteLogo,

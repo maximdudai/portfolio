@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { stackLogo } from './StackData';
 
 export const AppStack = ({stack}) => {
+
+    console.log(stack);
+
     const logoSrc = stackLogo[stack] || null;
 
     return (
