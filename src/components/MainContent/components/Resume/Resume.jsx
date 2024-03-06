@@ -8,7 +8,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
-import personalResume from "./resume/maximdudaicv.pdf";
+import personalResume from "./resume/maximdudai-cv.pdf";
 import { FaFileDownload } from "react-icons/fa";
 
 const Resume = () => {
@@ -53,11 +53,6 @@ const Resume = () => {
               renderTextLayer={false}
               width={finalPDFWidth}
               pageNumber={1}
-            />
-            <Page
-              renderTextLayer={false}
-              width={finalPDFWidth}
-              pageNumber={2}
             />
           </Document>
         </div>
