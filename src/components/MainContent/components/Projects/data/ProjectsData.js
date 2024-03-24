@@ -3,8 +3,35 @@ import bookShop from '../assets/bookShop-project.png';
 import githubSearch from '../assets/githubSearch.png';
 import currencyConvert from '../assets/moneyConverter.png';
 import petcareProject from '../assets/project-image/petCare/showcase1.png';
+import onlyModelingAgency from '../assets/onlyModelingAgency1.png';
+import estrelaPneus from '../assets/estrelaPneus.png';
+
 
 export const personalProjects = [
+    {
+        imageURL: onlyModelingAgency,
+        projectName: "Only Modeling Agency",
+        description: "Freelance project: Built a sleek business page for a modeling agency client using React, Tailwind, and i18n for seamless translation.",
+        githubURL: "",
+        liveVersion: "",
+        stack: [
+            "React",
+            "TailwindCSS",
+            "i18next"
+        ]
+    },
+    {
+        imageURL: estrelaPneus,
+        projectName: "Estrela Pneus e Reboques",
+        description: "Freelance project: Developed a dynamic business page for a car service and tire sales client. Utilized Next.js for enhanced performance, Tailwind for efficient design, and SCSS for custom styling.",
+        githubURL: "",
+        liveVersion: "https://estrela-pneus-web.vercel.app/",
+        stack: [
+            "NextJS",
+            "TailwindCSS",
+            "SASS",
+        ]
+    },
     {
         imageURL: petcareProject,
         projectName: "PetCare",
@@ -71,5 +98,5 @@ export const personalProjects = [
             "RESTAPI",
             "AXIOS"
         ]
-    }
+    },
 ]

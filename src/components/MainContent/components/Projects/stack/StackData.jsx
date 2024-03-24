@@ -11,6 +11,8 @@ import mysqlLogo from './images/mysql.png';
 import axiosLogo from './images/axios.png';
 import restapiLogo from './images/restapi.png';
 import tsLogo from './images/typescript.png';
+import i18next from './images/i18next.png';
+import nextjs from './images/nextjs.png';
 
 export const stackLogo = {
     html: htmlLogo,
@@ -26,6 +28,8 @@ export const stackLogo = {
     mysql: mysqlLogo,
     axios: axiosLogo,
     restapi: restapiLogo,
+    i18next: i18next,
+    nextjs: nextjs,
 }
 
 export const frontendStack = {
@@ -36,6 +40,7 @@ export const frontendStack = {
     tailwindcss: tailwindLogo,
     javascript: jsLogo,
     react: reactLogo,
+    nextjs: nextjs,
     typescript: tsLogo,
     vitejs: viteLogo,
 };
@@ -56,5 +61,6 @@ export const toolsStack = {
     vercel: 'https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png',
     microsoft_project: 'https://upload.wikimedia.org/wikipedia/commons/1/10/MS_Project_Logo.png',
     xampp: 'https://upload.wikimedia.org/wikipedia/commons/d/dc/XAMPP_Logo.png',
-    postman: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png'
+    postman: 'https://seeklogo.com/images/P/postman-logo-0087CA0D15-seeklogo.com.png',
+    trello: 'https://cdn-icons-png.flaticon.com/512/2504/2504834.png',
 }

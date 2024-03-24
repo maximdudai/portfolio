@@ -49,9 +49,9 @@ const Contact = () => {
   const contactForm = useRef();
   const [emailSended, setEmailSended] = useState(false);
 
-  const [from, setFrom] = useState("cnv");
-  const [email, setEmail] = useState("@tactu.ala");
-  const [content, setContent] = useState("something new");
+  const [from, setFrom] = useState("");
+  const [email, setEmail] = useState("");
+  const [content, setContent] = useState("");
 
   const handleFrom = (e) => {
     setFrom(e.target.value);
@@ -74,15 +74,17 @@ const Contact = () => {
         import.meta.env.VITE_PUBLIC_KEY
       )
       .then(
-        (result) => {
+        () => {
           setEmailSended(true);
-          console.log(result.text);
         },
         (error) => {
           console.log(error.text);
         }
       );
   };
+
+  // Disable the button while message is sending
+
   return emailSended ? (
     <div className="emailSuccess w-full md:max-w-lg flex flex-col justify-center min-h-screen">
       {onEmailSuccess()}
@@ -140,6 +142,7 @@ const Contact = () => {
 
           <div className="contactButton">
             <input
+              disabled={emailSended}
               type="submit"
               className="w-full cursor-pointer bg-gray-500/40 border-[1px] border-gray-400 text-white rounded-md p-3"
               value={"Send Message"}

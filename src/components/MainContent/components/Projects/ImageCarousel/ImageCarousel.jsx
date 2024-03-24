@@ -33,6 +33,20 @@ import petcareImage3 from '../assets/project-image/petCare/showcase3.png';
 import petcareImage4 from '../assets/project-image/petCare/showcase4.png';
 import petcareImage5 from '../assets/project-image/petCare/showcase5.png';
 
+import onlyModelingAgency1 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency1.png';
+import onlyModelingAgency2 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency2.png';
+import onlyModelingAgency3 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency3.png';
+import onlyModelingAgency4 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency4.png';
+import onlyModelingAgency5 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency5.png';
+import onlyModelingAgency6 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency6.png';
+import onlyModelingAgency7 from '../assets/project-image/OnlyModelingAgency/onlyModelingAgency7.png';
+
+import estrelaPneus1 from '../assets/project-image/estrelaPneus/estrelaPneus1.png';
+import estrelaPneus2 from '../assets/project-image/estrelaPneus/estrelaPneus2.png';
+import estrelaPneus3 from '../assets/project-image/estrelaPneus/estrelaPneus3.png';
+import estrelaPneus4 from '../assets/project-image/estrelaPneus/estrelaPneus4.png';
+import estrelaPneus5 from '../assets/project-image/estrelaPneus/estrelaPneus5.png';
+
 import { GrFormPrevious, GrFormNext } from 'react-icons/gr';
 
 
@@ -73,9 +87,26 @@ const imagesPath = {
     petcareImage4,
     petcareImage5,
   ],
+  onlymodelingagency: [
+    onlyModelingAgency1,
+    onlyModelingAgency2,
+    onlyModelingAgency3,
+    onlyModelingAgency4,
+    onlyModelingAgency5,
+    onlyModelingAgency6,
+    onlyModelingAgency7,
+  ],
+  estrelapneusereboques: [
+    estrelaPneus1,
+    estrelaPneus2,
+    estrelaPneus3,
+    estrelaPneus4,
+    estrelaPneus5,
+  ]
 };
 
 export const ImageCarousel = ({ screenWidth, projectName, imageSize }) => {
+    console.log(projectName);
     const projectImages = imagesPath[projectName];
 
     if (!projectImages) {
