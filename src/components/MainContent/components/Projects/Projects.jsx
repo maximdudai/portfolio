@@ -34,6 +34,10 @@ const Projects = () => {
     "flex flex-col justify-between items-center bg-black/25 dark:bg-gray-400/5 rounded-md my-3";
   const projectContainerImage = "rounded-md p-3";
 
+  const isBothLinksAvailable =
+    personalProjects[selectedProject]?.liveVersion !== null ||
+    personalProjects[selectedProject]?.githubURL !== null;
+
   return (
     <>
       <div className="portfolioProjects w-full h-full lg:h-full lg:flex items-center">
@@ -100,13 +104,11 @@ const Projects = () => {
                         <Stack selectedProject={selectedProject} />
                       </div>
 
-                      {personalProjects[selectedProject].githubURL !== "" ||
-                        (personalProjects[selectedProject].liveVersion !==
-                          "" && (
-                          <div className="selectedProjectLinks flex flex-col bg-dark/25 dark:bg-white/5 text-center p-2 rounded my-4">
-                            <Sources selectedProject={selectedProject} />
-                          </div>
-                        ))}
+                      {isBothLinksAvailable && (
+                        <div className="selectedProjectLinks h-full flex flex-col bg-dark/25 dark:bg-white/5 text-center p-2 rounded my-4">
+                          <Sources selectedProject={selectedProject} />
+                        </div>
+                      )}
                     </div>
                   </div>
                 ) : (

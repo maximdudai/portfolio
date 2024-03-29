@@ -6,6 +6,7 @@ import { Github } from "../../../../Links/Github";
 import { BsWindowFullscreen } from "react-icons/bs";
 
 export const Sources = ({ selectedProject }) => {
+  
   return (
     <>
       <div className="sourceLinks w-full bg-dark/25 dark:bg-white/5 text-center p-2 rounded my-4 lg:dark:bg-transparent">
@@ -14,8 +15,8 @@ export const Sources = ({ selectedProject }) => {
             <h3 className={`text-md md:text-sm tracking-widest`}>Source</h3>
           </div>
         </div>
-        <div className="selectedProjectLinkAddress w-auto my-2 flex lg:flex-col lg:h-[12.5rem] lg:justify-between gap-3">
-          {personalProjects[selectedProject].liveVersion !== "" && (
+        <div className="selectedProjectLinkAddress w-auto my-2 flex lg:flex-col lg:h-[12.5rem] lg:justify-center gap-3">
+          {personalProjects[selectedProject].liveVersion !== null ? (
             <button className="bg-white/5 dark:bg-white/10 p-2 rounded flex flex-col items-center justify-between border-[1.5px] border-gray-400/50">
               <a
                 href={personalProjects[selectedProject].liveVersion}
@@ -28,8 +29,8 @@ export const Sources = ({ selectedProject }) => {
                 LIVE
               </span>
             </button>
-          )}
-          {personalProjects[selectedProject].githubURL !== "" && (
+          ): null}
+          {personalProjects[selectedProject].githubURL !== null ? (
             <button className="bg-white/5 dark:bg-white/10 p-2 rounded flex flex-col justify-center items-center border-[1.5px] border-gray-400/50">
               <Github
                 customLink={personalProjects[selectedProject].githubURL}
@@ -38,7 +39,7 @@ export const Sources = ({ selectedProject }) => {
                 CODE
               </span>
             </button>
-          )}
+          ): null}
         </div>
       </div>
     </>
