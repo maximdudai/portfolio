@@ -47,7 +47,7 @@ const Resume = () => {
           </button>
         </div>
 
-        <div className="portfolioFormatPDF mt-5 lg:mt-0 h-full overflow-y-scroll p-2 rounded border-2 border-black/10 dark:border-none dark:p-0">
+        <div className="portfolioFormatPDF p-2 rounded border-2 border-black/10 dark:border-none dark:p-0">
           <Document file={personalResume}>
             <Page
               renderTextLayer={false}
